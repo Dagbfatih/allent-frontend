@@ -1,0 +1,29 @@
+/* .list-unstyled > li > a {
+  color: #09437D;
+  text-decoration: none;
+}
+
+.list-unstyled > li > a:hover {
+  color: #0D6EFD;
+  text-decoration: underline;
+} */
+
+.list-unstyled > li > a {
+  color: #495057;;
+  text-decoration: none;
+}
+
+.list-unstyled > li > a:hover {
+  color: #0D6EFD;
+  text-decoration: underline;
+}
+
+
+/* 
+.bg-custom {
+  background-color: var(--app-footer-color);
+} */
+
+.text-custom{
+  color: #09437D;
+}

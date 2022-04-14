@@ -1,0 +1,108 @@
+
+
+<nav class="navbar sticky-top navbar-expand-md navbar-light bg-custom bg-white bd-navbar" id="navbar">
+    <!-- navbar-light bg-light  -->
+    <div class="container-xxl flex-wrap flex-md-nowrap">
+        <a class="navbar-brand" routerLink="/">
+            <img src="assets/logo/allent_logo_without_text.png" height="40" class="d-inline-block align-text-top">
+            <!-- <strong class="ms-1">Allent</strong> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav flex-wrap bd-navbar-nav pt-2 py-md-0 text-start text-custom">
+                <!-- flex-row vardı -->
+                <li class="nav-item col-md-auto">
+                    <a class="nav-link font-italic" aria-current="page" routerLink="/about-us">
+                        {{getTranslate("aboutUs")}}
+                    </a>
+                </li>
+                <li class="nav-item col-md-auto">
+                    <!-- her birinde col 6 vardı -->
+                    <a class="nav-link" aria-current="page" routerLink="/gallery">
+                        {{getTranslate("gallery")}}
+                    </a>
+                </li>
+                <li class="nav-item col-md-auto">
+                    <a class="nav-link" aria-current="page" routerLink="/references">
+                        {{getTranslate("references")}}
+                    </a>
+                </li>
+                <li class="nav-item col-md-auto">
+                    <a class="nav-link" aria-current="page" routerLink="/contact">
+                        {{getTranslate("contact")}}
+                    </a>
+                </li>
+            </ul>
+
+            <hr class="d-md-none text-dark-50">
+
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto ps-2 align-items-center text-start text-custom">
+
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                        <i class="fa fa-whatsapp" style="font-size: 24px;" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                        <i class="fa fa-instagram" style="font-size: 24px;" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook" style="font-size: 24px;" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin" style="font-size: 24px;" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+
+
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" aria-current="page" routerLink="/tests/details">
+                        <ul class="friend-list">
+                            <li>
+                                <div class="left">
+
+                                </div>
+                                <div class="right">
+                                    <h3 class="d-flex justify-content-center"><i class="fa fa-phone"
+                                            style="font-size: 20px;"></i></h3>
+                                    <p class="text-dark">+90 542 519 09 40</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+
+                <!-- Language -->
+                <li class="nav-item dropdown dropdown-menu-end ">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <!-- <i class="fa fa-cog mr-1"></i>  -->
+                        <span class="flag-icon flag-icon-{{getCurrentLanguage().flagCode}} flag-icon-squared"></span>
+                        {{getCurrentLanguage()!.languageName}}
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDropdown">
+                        <li *ngFor="let language of languages">
+                            <a class="dropdown-item" (click)="setLanguage(language.code)">
+                                <span class="flag-icon flag-icon-{{language.flagCode}} flag-icon-squared"></span>
+                                {{language.languageName}}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

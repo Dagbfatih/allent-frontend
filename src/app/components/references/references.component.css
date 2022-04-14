@@ -1,0 +1,13 @@
+.img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  width: 300px;
+  height: 300px;
+  transition: filter .4s ease-in-out;
+}
+
+.img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+  transition: 0.5;
+}

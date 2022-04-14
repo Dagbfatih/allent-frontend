@@ -1,0 +1,88 @@
+.dropdown-menu {
+  width: 15%;
+}
+
+ul.friend-list {
+  margin: 0;
+  padding: 0;
+}
+
+.text-custom > li > a {
+  color: #09437db9;
+  font-weight: 400;
+}
+
+.text-custom > li > a:hover {
+  color: #09437d; /* original */
+}
+
+.navbar-nav > .active > a {
+  font-weight: 600;
+}
+
+.fa.fa-whatsapp {
+  color: #0dc143;
+}
+
+.fa.fa-facebook {
+  color: #4867AA;
+}
+
+.fa.fa-linkedin {
+  color: #0A66C2;
+}
+
+.fa.fa-instagram {
+  color: transparent;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background: -webkit-radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* ul.navbar-nav > li > a{
+    color: rgb(4, 37, 74);
+} */
+
+ul.friend-list li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  margin-left: 20px;
+}
+
+ul.friend-list li:hover {
+  background: var(--app-navi-profile-hover-color);
+  cursor: pointer;
+}
+
+ul.friend-list .left i {
+  margin-right: 20px;
+}
+
+ul.friend-list .right h3 {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+ul.friend-list .right p {
+  font-size: 11px;
+  color: black;
+  margin: 0;
+}

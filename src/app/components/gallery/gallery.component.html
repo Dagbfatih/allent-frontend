@@ -1,0 +1,12 @@
+<div class="container mt-5 w-100">
+    <h1 class="display-4">{{getTranslate('gallery')}}</h1>
+    <hr class="">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let photo of photos" class="col">
+            <div class="card mb-3 h-100">
+                <img [src]="photo.path" class="card-img-top" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
