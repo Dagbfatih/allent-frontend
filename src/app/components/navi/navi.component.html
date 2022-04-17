@@ -12,6 +12,11 @@
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav flex-wrap bd-navbar-nav pt-2 py-md-0 text-start text-custom">
                 <!-- flex-row vardı -->
+                <li class="nav-item col-md-auto d-lg-none">
+                    <a class="nav-link" aria-current="page" routerLink="/">
+                        {{getTranslate("homePage")}}
+                    </a>
+                </li>
                 <li class="nav-item col-md-auto ">
                     <a class="nav-link" aria-current="page" routerLink="/about-us">
                         {{getTranslate("aboutUs")}}
@@ -37,9 +42,9 @@
 
             <hr class="d-md-none text-dark-50">
 
-            <ul class="navbar-nav flex-row flex-wrap ms-md-auto ps-2 align-items-center text-start text-custom">
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto align-items-center text-start text-custom">
 
-                <li class="nav-item col-6 col-md-auto">
+                <li class="nav-item col-12 col-lg-auto">
                     <!-- LG -->
                     <a class="nav-link p-2 d-none d-lg-block" href="https://wa.me/905425190940" target="_blank"
                         rel="noopener">
@@ -47,12 +52,12 @@
                     </a>
                     <!-- SM -->
                     <a class="nav-link d-lg-none" href="https://wa.me/905425190940" target="_blank" rel="noopener">
-                        <i class="fa fa-whatsapp" style="font-size: 21px;" aria-hidden="true"></i>
-                        <small class="d-md-none ms-2 text-secondary">Whatsapp</small>
+                        <i class="fa fa-whatsapp" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                        <small class="ms-2 text-secondary">Whatsapp</small>
                     </a>
                 </li>
 
-                <li class="nav-item col-6 col-md-auto">
+                <li class="nav-item col-12 col-lg-auto">
                     <!-- LG -->
                     <a class="nav-link p-2 d-none d-lg-block" href="https://www.instagram.com/allentplastik/"
                         target="_blank" rel="noopener">
@@ -61,40 +66,40 @@
                     <!-- SM -->
                     <a class="nav-link d-lg-none" href="https://www.instagram.com/allentplastik/" target="_blank"
                         rel="noopener">
-                        <i class="fa fa-instagram" style="font-size: 21px;" aria-hidden="true"></i>
-                        <small class="d-md-none ms-2 text-secondary">İnstagram</small>
+                        <i class="fa fa-instagram" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                        <small class="ms-2 text-secondary">İnstagram</small>
                     </a>
                 </li>
 
-                <li class="nav-item col-6 col-md-auto">
+                <li class="nav-item col-12 col-lg-auto">
                     <!-- LG -->
                     <a class="nav-link p-2 d-none d-lg-block" href="#" target="_blank" rel="noopener">
                         <i class="fa fa-facebook" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
                     <!-- SM -->
                     <a class="nav-link d-lg-none" href="#" target="_blank" rel="noopener">
-                        <i class="fa fa-facebook" style="font-size: 21px;" aria-hidden="true"></i>
-                        <small class="d-md-none ms-2 text-secondary">Facebook</small>
+                        <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                        <small class="ms-2 text-secondary">Facebook</small>
                     </a>
                 </li>
 
-                <li class="nav-item col-6 col-md-auto">
+                <li class="nav-item col-12 col-lg-auto">
                     <!-- LG -->
                     <a class="nav-link p-2 d-none d-lg-block" href="https://www.linkedin.com/company/allent-plastik/"
                         target="_blank" rel="noopener">
                         <i class="fa fa-linkedin" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
-                    <!-- SM -->
+                    <!-- MD - SM -->
                     <a class="nav-link d-lg-none" href="https://www.linkedin.com/company/allent-plastik/"
                         target="_blank" rel="noopener">
-                        <i class="fa fa-linkedin" style="font-size: 21px;" aria-hidden="true"></i>
-                        <small class="d-md-none ms-2 text-secondary">Linkedin</small>
+                        <i class="fa fa-linkedin" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                        <small class="ms-2 text-secondary">Linkedin</small>
                     </a>
                 </li>
 
 
                 <!-- LG -->
-                <li class="nav-item col-6 col-md-auto d-none d-lg-block">
+                <li class="nav-item col-6 col-lg-auto d-none d-lg-block">
                     <a class="nav-link p-2" aria-current="page" routerLink="/tests/details">
                         <ul class="friend-list">
                             <li class="lg">
@@ -113,7 +118,7 @@
                 </li>
 
                 <!-- SM -->
-                <li class="nav-item col-12 col-md-auto d-lg-none mb-3">
+                <li class="nav-item col-12 col-lg-auto d-lg-none mb-3">
                     <a class="nav-link" aria-current="page" routerLink="/contact">
                         <ul class="friend-list sm">
                             <li class="sm">

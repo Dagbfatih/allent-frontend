@@ -295,5 +295,17 @@ export class TranslateDbService extends DbServiceRepositoryBase<Translate> {
       key: 'location',
       value: 'Location',
     } /* --------------------- */,
+    {
+      id: 3,
+      languageId: 1,
+      key: 'homePage',
+      value: 'Ana Sayfa',
+    },
+    {
+      id: 14,
+      languageId: 2,
+      key: 'homePage',
+      value: 'Home Page',
+    } /* --------------------- */,
   ];
 }
