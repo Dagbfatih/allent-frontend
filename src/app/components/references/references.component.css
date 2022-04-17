@@ -6,7 +6,7 @@
   transition: filter .4s ease-in-out;
 }
 
-.img:hover {
+.img:hover, .img:active {
     filter: none;
     -webkit-filter: grayscale(0);
   transition: 0.5;

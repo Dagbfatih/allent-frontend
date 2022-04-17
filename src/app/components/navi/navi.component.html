@@ -1,21 +1,19 @@
-
-
-<nav class="navbar sticky-top navbar-expand-md navbar-light bg-custom bg-white bd-navbar" id="navbar">
-    <!-- navbar-light bg-light  -->
-    <div class="container-xxl flex-wrap flex-md-nowrap">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-custom bg-white bd-navbar" aria-label="Main navigation">
+    <div class="container-xl flex-wrap flex-md-nowrap">
         <a class="navbar-brand" routerLink="/">
             <img src="assets/logo/allent_logo_without_text.png" height="40" class="d-inline-block align-text-top">
             <!-- <strong class="ms-1">Allent</strong> -->
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" id="navbarSideCollapse"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav flex-wrap bd-navbar-nav pt-2 py-md-0 text-start text-custom">
                 <!-- flex-row vardı -->
-                <li class="nav-item col-md-auto">
-                    <a class="nav-link font-italic" aria-current="page" routerLink="/about-us">
+                <li class="nav-item col-md-auto ">
+                    <a class="nav-link" aria-current="page" routerLink="/about-us">
                         {{getTranslate("aboutUs")}}
                     </a>
                 </li>
@@ -42,42 +40,88 @@
             <ul class="navbar-nav flex-row flex-wrap ms-md-auto ps-2 align-items-center text-start text-custom">
 
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                    <!-- LG -->
+                    <a class="nav-link p-2 d-none d-lg-block" href="https://wa.me/905425190940" target="_blank"
+                        rel="noopener">
                         <i class="fa fa-whatsapp" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
+                    <!-- SM -->
+                    <a class="nav-link d-lg-none" href="https://wa.me/905425190940" target="_blank" rel="noopener">
+                        <i class="fa fa-whatsapp" style="font-size: 21px;" aria-hidden="true"></i>
+                        <small class="d-md-none ms-2 text-secondary">Whatsapp</small>
+                    </a>
                 </li>
 
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                    <!-- LG -->
+                    <a class="nav-link p-2 d-none d-lg-block" href="https://www.instagram.com/allentplastik/"
+                        target="_blank" rel="noopener">
                         <i class="fa fa-instagram" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
+                    <!-- SM -->
+                    <a class="nav-link d-lg-none" href="https://www.instagram.com/allentplastik/" target="_blank"
+                        rel="noopener">
+                        <i class="fa fa-instagram" style="font-size: 21px;" aria-hidden="true"></i>
+                        <small class="d-md-none ms-2 text-secondary">İnstagram</small>
+                    </a>
                 </li>
 
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                    <!-- LG -->
+                    <a class="nav-link p-2 d-none d-lg-block" href="#" target="_blank" rel="noopener">
                         <i class="fa fa-facebook" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
+                    <!-- SM -->
+                    <a class="nav-link d-lg-none" href="#" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook" style="font-size: 21px;" aria-hidden="true"></i>
+                        <small class="d-md-none ms-2 text-secondary">Facebook</small>
+                    </a>
                 </li>
 
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+                    <!-- LG -->
+                    <a class="nav-link p-2 d-none d-lg-block" href="https://www.linkedin.com/company/allent-plastik/"
+                        target="_blank" rel="noopener">
                         <i class="fa fa-linkedin" style="font-size: 24px;" aria-hidden="true"></i>
+                    </a>
+                    <!-- SM -->
+                    <a class="nav-link d-lg-none" href="https://www.linkedin.com/company/allent-plastik/"
+                        target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin" style="font-size: 21px;" aria-hidden="true"></i>
+                        <small class="d-md-none ms-2 text-secondary">Linkedin</small>
                     </a>
                 </li>
 
 
-
-                <li class="nav-item col-6 col-md-auto">
+                <!-- LG -->
+                <li class="nav-item col-6 col-md-auto d-none d-lg-block">
                     <a class="nav-link p-2" aria-current="page" routerLink="/tests/details">
                         <ul class="friend-list">
-                            <li>
-                                <div class="left">
+                            <li class="lg">
+                                <div class="left" style="margin-right: 0px;">
 
                                 </div>
                                 <div class="right">
-                                    <h3 class="d-flex justify-content-center"><i class="fa fa-phone"
-                                            style="font-size: 20px;"></i></h3>
-                                    <p class="text-dark">+90 542 519 09 40</p>
+                                    <h3 class="d-flex justify-content-center lg">
+                                        <i class="fa fa-phone lg" style="font-size: 20px; margin-left: 0px;"></i>
+                                    </h3>
+                                    <p class="text-dark lg">+90 542 519 09 40</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+
+                <!-- SM -->
+                <li class="nav-item col-12 col-md-auto d-lg-none mb-3">
+                    <a class="nav-link" aria-current="page" routerLink="/contact">
+                        <ul class="friend-list sm">
+                            <li class="sm">
+                                <div class="left" style="margin-right: 0px;">
+                                    <i class="fa fa-phone sm" style="font-size: 20px; margin-left: 0px;"></i>
+                                </div>
+                                <div class="right">
+                                    <p class="text-dark sm">+90 542 519 09 40</p>
                                 </div>
                             </li>
                         </ul>

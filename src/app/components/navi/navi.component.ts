@@ -3,7 +3,7 @@ import { LanguageService } from './../../services/language.service';
 import { Language } from './../../models/entities/language';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
-declare var $: any;
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-navi',
@@ -19,7 +19,21 @@ export class NaviComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.runOffcanvasJs();
     this.getLanguages();
+  }
+
+  runOffcanvasJs() {
+    (function mainScript() {
+      'use strict';
+      const offcanvasToggle = document.querySelector(
+        '[data-bs-toggle="offcanvas"]'
+      );
+      const offcanvasCollapse = document.querySelector('.offcanvas-collapse');
+      offcanvasToggle?.addEventListener('click', function () {
+        offcanvasCollapse?.classList.toggle('open');
+      });
+    })();
   }
 
   getCurrentLanguage(): Language {

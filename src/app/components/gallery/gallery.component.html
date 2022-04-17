@@ -2,10 +2,24 @@
     <h1 class="display-4">{{getTranslate('gallery')}}</h1>
     <hr class="">
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div *ngFor="let photo of photos" class="col">
-            <div class="card mb-3 h-100">
-                <img [src]="photo.path" class="card-img-top" alt="...">
+    <!-- LG -->
+    <div class="d-none d-lg-block">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div *ngFor="let photo of photos" class="col">
+                <div class="mb-3">
+                    <img [src]="photo.path" class="img-fluid" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SM -->
+    <div class="d-lg-none">
+        <div class="row row-cols-1 row-cols-md-3">
+            <div *ngFor="let photo of photos" class="col">
+                <div class="mb-3">
+                    <img [src]="photo.path" class="img-fluid" alt="...">
+                </div>
             </div>
         </div>
     </div>

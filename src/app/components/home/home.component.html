@@ -1,18 +1,20 @@
-<div class="container-fluid pe-0 ps-0 w-100">
+<div class="container-fluid pe-0 ps-0 w-100 d-none d-lg-block">
 
     <!-- Carousel -->
     <div class="bd-masthead">
         <div class="container-fluid pe-0 ps-0">
             <div class="row g-0">
                 <div class="col-12 d-flex justify-content-center">
+
+                    <!-- Pc -->
                     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button *ngFor="let img of moldImages; let i = index;" type="button"
+                            <button *ngFor="let img of moldImagesByLg; let i = index;" type="button"
                                 data-bs-target="#myCarousel" [ngClass]="(i === 0) ? 'active' : ''"
                                 [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item" *ngFor="let img of moldImages; let i = index;"
+                            <div class="carousel-item" *ngFor="let img of moldImagesByLg; let i = index;"
                                 [ngClass]="(i === 0) ? 'active' : ''">
                                 <img [src]="img.path" class="carousel-img w-100 h-100" alt="...">
 
@@ -39,18 +41,15 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Part 2 -->
-
+    <!-- Overview -->
     <div class="container marketing" data-bs-spy="scroll" data-bs-target="#myCarousel" data-bs-offset="0" tabindex="0">
-
-        <!-- <hr class="featurette-divider" style="margin-top: 2%;"> -->
-
-        <div class="row featurette" style="margin-top: 5%;" >
+        <div class="row featurette" style="margin-top: 5%;">
             <div class="col-md-7">
                 <h2 class="featurette-heading" id="0">
                     Plastik Enjeksiyon Kalıpçılığında
@@ -76,8 +75,7 @@
                 </ol>
             </div>
             <div class="col-md-5">
-                <img src="assets/images/modern-flat-design-1.png"
-                    alt="" width="500" height="500" class="img-fluid">
+                <img src="assets/images/modern-flat-design-1.png" alt="" width="500" height="500" class="img-fluid">
             </div>
         </div>
 
@@ -111,8 +109,7 @@
                 </ul>
             </div>
             <div class="col-md-5 order-md-1">
-                <img src="assets/images/modern-flat-design-2.png"
-                    alt="" width="500" height="500" class="img-fluid">
+                <img src="assets/images/modern-flat-design-2.png" alt="" width="500" height="500" class="img-fluid">
             </div>
         </div>
 
@@ -129,18 +126,160 @@
                 </p>
             </div>
             <div class="col-md-5">
-                <img src="assets/images/modern-flat-design-3.png"
-                    alt="" width="500" height="500" class="img-fluid">
+                <img src="assets/images/modern-flat-design-3.png" alt="" width="500" height="500" class="img-fluid">
             </div>
         </div>
 
         <!-- <hr class="featurette-divider"> -->
+    </div>
+</div> <!-- /.container -->
+<!-- END THE PC  -->
 
-        <!-- /END THE FEATURETTES -->
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------ -->
 
-    </div><!-- /.container -->
+<!-- START THE SM  -->
+<div class="container-fluid pe-0 ps-0 mb-3 w-100 d-lg-none">
 
-</div>
+    <!-- Carousel -->
+    <div class="bd-masthead">
+        <div class="container-fluid pe-0 ps-0">
+            <div class="row g-0">
+                <div class="col-12 d-flex justify-content-center">
+
+                    <!-- Phone -->
+                    <div id="myCarouselForSm" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button *ngFor="let img of moldImagesBySm; let i = index;" type="button"
+                                data-bs-target="#myCarouselForSm" [ngClass]="(i === 0) ? 'active' : ''"
+                                [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item" *ngFor="let img of moldImagesBySm; let i = index;"
+                                [ngClass]="(i === 0) ? 'active' : ''">
+                                <img [src]="img.path" class="carousel-img w-100 h-100" alt="...">
+
+                                <div class="container">
+                                    <div class="carousel-caption text-center" style="bottom: auto; top: 0%;">
+                                        <h1>Plastik Enjeksiyon Kalıpçılığı</h1>
+                                        <p class="font-italic">
+                                            Müşterilerimizin ihtiyaç duyduğu plastik enjeksiyon kalıplarını yapıyoruz
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarouselForSm"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#myCarouselForSm"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Overview -->
+    <div class="container marketing mt-5" data-bs-spy="scroll" data-bs-target="#myCarousel" data-bs-offset="0"
+        tabindex="0">
+        <div class="row featurette" style="margin-top: 5%;">
+            <div class="col-md-5">
+                <img src="assets/images/modern-flat-design-1.png" alt="" width="500" height="500"
+                    class="img-fluid img-sm">
+            </div>
+            <div class="col-md-7">
+                <h2 class="featurette-heading" id="0">
+                    Plastik Enjeksiyon Kalıpçılığında
+                    <span class="text-muted">Yılların Tecrübesi.</span>
+                </h2>
+                <p class="lead">Müşterilerimizin ihtiyaç duyduğu plastik enjeksiyon kalıplarını mühendislik yaklaşımıyla
+                    ve kaliteden ödün vermeden yapıyoruz. Sahip olduğumuz ürün geliştirme tecrübesi sayesinde talep
+                    edilen
+                    kalıpların üretiminden önce müşterilerimizi olası sorunlar hakkında bilgilendiriyoruz ve
+                    yönlendiriyoruz.
+                    Uzun yıllar başarıyla yaptığımız kalıp türleri;
+                </p>
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <p class="lead">Plastik su filtrelerine ait parçalar</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="lead">Plastik boru ek parçaları</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="lead">İnce cidarlı rijit plastik ambalajlar...</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette" id="1">
+            <div class="col-md-5 order-md-1">
+                <img src="assets/images/modern-flat-design-2.png" alt="" width="500" height="500"
+                    class="img-fluid img-sm">
+            </div>
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading" id="1">
+                    Endüstriyel Ürün Geliştirme
+                    <!-- <span class="text-muted">See for yourself.</span> -->
+                </h2>
+                <p class="lead">Üretilebilir, uygun maliyetli, kullanışlı, estetik, mukavemetli, işlevsel, uzun ömürlü,
+                    ergonomik, farklı ve özgün ürün tasarımlarına ihtiyacınız varsa bizimle iletişime geçebilirsiniz.
+                    Bugüne kadar tecrübe etme imkânı bulduğumuz birkaç örnek;
+                </p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <p class="lead">Plastik hidrosiklon tasarımı ve akış analizleri</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="lead">Plastik venturi tasarımı ve akış analizleri</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="lead">Büyük hacimli, basınca dayanıklı, enjeksiyonluk plastik tank tasarımı ve
+                            mukavemet
+                            analizleri</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="lead">Plastik kelepçe tasarımı ve mukavemet analizleri...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette" id="2">
+            <div class="col-md-5">
+                <img src="assets/images/modern-flat-design-3.png" alt="" width="500" height="500"
+                    class="img-fluid img-sm">
+            </div>
+            <div class="col-md-7">
+                <h2 class="featurette-heading" id="2">Plastik Ürün Üretimi,
+                    <span class="text-muted">Siz Hayal Edin Biz Yapalım.</span>
+                </h2>
+                <p class="lead">
+                    Sadece ürün tasarımı veya ürünün kalıplanması değil de nihai ürün ihtiyacınız varsa bizimle
+                    iletişime geçebilirsiniz.
+                </p>
+            </div>
+        </div>
+        <!-- <hr class="featurette-divider"> -->
+    </div>
+</div><!-- /.container -->
 
 <!-- FOOTER -->
 <!-- <footer class="container" style="margin-bottom: 5rem;">

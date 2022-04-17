@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SettingsService } from './services/settings.service';
 import { TranslationService } from './services/translation.service';
-import * as $ from 'jquery';
+declare var $: any;
 
 @Component({
   selector: 'app-root',

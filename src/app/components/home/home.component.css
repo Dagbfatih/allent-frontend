@@ -28,9 +28,14 @@ hr.featurette-divider{
   margin-bottom: 5rem;
 }
 
+.img-sm{
+  margin-bottom: 1rem;
+}
+
 .list-group .list-group-item{
   background-color: var(--app-background-color);
   color: white;
+  border-top: 1px solid #363738;
 }
 
 .btn-info:hover {

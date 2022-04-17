@@ -21,6 +21,17 @@ export class HomeComponent implements OnInit {
     this.moldImages = this.moldImageService.getAll().data;
   }
 
+  get moldImagesBySm() {
+    let images = this.moldImages.filter((m) => m.mode === 'sm');
+    console.log("images", images)
+    return images;
+  }
+
+  get moldImagesByLg() {
+    let images = this.moldImages.filter((m) => m.mode === 'lg');
+    return images;
+  }
+
   getTranslate(key: string) {
     return allTranslates.get(key);
   }
