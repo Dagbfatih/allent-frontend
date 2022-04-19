@@ -1,15 +1,113 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-custom bg-white bd-navbar" aria-label="Main navigation">
-    <div class="container-xl flex-wrap flex-md-nowrap">
-        <a class="navbar-brand" routerLink="/">
-            <img src="assets/logo/allent_logo_without_text.png" height="40" class="d-inline-block align-text-top">
-            <!-- <strong class="ms-1">Allent</strong> -->
-        </a>
-        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" id="navbarSideCollapse"
-            aria-label="Toggle navigation">
+<!-- SM SOCİAL -->
+<nav class="navbar sticky-top navbar-expand navbar-custom navbar-dark bg-dark one d-lg-none" aria-label="Second navbar example">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
+            aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav me-auto">
+
+                <!-- LG LİST -->
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link p-2" href="https://wa.me/905425190940" target="_blank"
+                        rel="noopener">
+                        <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link p-2" href="https://www.instagram.com/allentplastik/"
+                        target="_blank" rel="noopener">
+                        <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link p-2" href="https://www.linkedin.com/company/allent-plastik/"
+                        target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <!-- SM LİST -->
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link p-2" href="https://wa.me/905425190940" target="_blank"
+                        rel="noopener">
+                        <i class="fa fa-whatsapp fa-sm" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link p-2" href="https://www.instagram.com/allentplastik/"
+                        target="_blank" rel="noopener">
+                        <i class="fa fa-instagram fa-sm" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                        <i class="fa fa-facebook fa-sm" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link p-2" href="https://www.linkedin.com/company/allent-plastik/"
+                        target="_blank" rel="noopener">
+                        <i class="fa fa-linkedin fa-sm" aria-hidden="true"></i>
+                    </a>
+                </li>
+                
+            </ul>
+            <div>
+                <ul class="friend-list sm">
+                    <li class="sm">
+                        <div class="left" style="margin-right: 0px;">
+                            <i class="fa fa-phone sm text-white fa-sm"></i>
+                        </div>
+                        <div class="right">
+                            <p class="text-white sm">+90 542 519 09 40</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-custom bg-white bd-navbar two">
+    <div class="container-xl flex-wrap flex-md-nowrap">
+        <a class="navbar-brand d-flex align-items-center" routerLink="/">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item p-0" style="border: 0;">
+                    <img src="assets/logo/allent_logo_without_text.png" height="40"
+                        class="d-inline-block align-text-top">
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start d-lg-none p-0"
+                    style="border: 0;">
+                    <div class="ms-2 me-auto g-0" style="font-size: 0.5rem;">
+                        <div style="font-size: 21px;">ALLENT</div>
+                        <label style="font-size: 12px;">Plastik&Kalıp</label>
+                    </div>
+                </li>
+            </ul>
+        </a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"></span>
+        </button>
+
+
+
+        <!-- LG NAVBAR -->
+        <div class="d-none d-lg-block collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav flex-wrap bd-navbar-nav pt-2 py-md-0 text-start text-custom">
                 <!-- flex-row vardı -->
                 <li class="nav-item col-md-auto d-lg-none">
@@ -50,11 +148,6 @@
                         rel="noopener">
                         <i class="fa fa-whatsapp" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
-                    <!-- SM -->
-                    <a class="nav-link d-lg-none" href="https://wa.me/905425190940" target="_blank" rel="noopener">
-                        <i class="fa fa-whatsapp" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
-                        <small class="ms-2 text-secondary">Whatsapp</small>
-                    </a>
                 </li>
 
                 <li class="nav-item col-12 col-lg-auto">
@@ -63,23 +156,12 @@
                         target="_blank" rel="noopener">
                         <i class="fa fa-instagram" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
-                    <!-- SM -->
-                    <a class="nav-link d-lg-none" href="https://www.instagram.com/allentplastik/" target="_blank"
-                        rel="noopener">
-                        <i class="fa fa-instagram" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
-                        <small class="ms-2 text-secondary">İnstagram</small>
-                    </a>
                 </li>
 
                 <li class="nav-item col-12 col-lg-auto">
                     <!-- LG -->
                     <a class="nav-link p-2 d-none d-lg-block" href="#" target="_blank" rel="noopener">
                         <i class="fa fa-facebook" style="font-size: 24px;" aria-hidden="true"></i>
-                    </a>
-                    <!-- SM -->
-                    <a class="nav-link d-lg-none" href="#" target="_blank" rel="noopener">
-                        <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
-                        <small class="ms-2 text-secondary">Facebook</small>
                     </a>
                 </li>
 
@@ -88,12 +170,6 @@
                     <a class="nav-link p-2 d-none d-lg-block" href="https://www.linkedin.com/company/allent-plastik/"
                         target="_blank" rel="noopener">
                         <i class="fa fa-linkedin" style="font-size: 24px;" aria-hidden="true"></i>
-                    </a>
-                    <!-- MD - SM -->
-                    <a class="nav-link d-lg-none" href="https://www.linkedin.com/company/allent-plastik/"
-                        target="_blank" rel="noopener">
-                        <i class="fa fa-linkedin" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
-                        <small class="ms-2 text-secondary">Linkedin</small>
                     </a>
                 </li>
 
@@ -111,22 +187,6 @@
                                         <i class="fa fa-phone lg" style="font-size: 20px; margin-left: 0px;"></i>
                                     </h3>
                                     <p class="text-dark lg">+90 542 519 09 40</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </a>
-                </li>
-
-                <!-- SM -->
-                <li class="nav-item col-12 col-lg-auto d-lg-none mb-3">
-                    <a class="nav-link" aria-current="page" routerLink="/contact">
-                        <ul class="friend-list sm">
-                            <li class="sm">
-                                <div class="left" style="margin-right: 0px;">
-                                    <i class="fa fa-phone sm" style="font-size: 20px; margin-left: 0px;"></i>
-                                </div>
-                                <div class="right">
-                                    <p class="text-dark sm">+90 542 519 09 40</p>
                                 </div>
                             </li>
                         </ul>
@@ -152,6 +212,128 @@
                     </ul>
                 </li>
             </ul>
+        </div> <!-- END - LG NAVBAR -->
+
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+        <!-- ------------------------------------------------------------------------------------------------------ -->
+
+        <!-- SM NAVBAR -->
+        <div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-custom" id="offcanvasNavbarLabel">
+                    <strong>{{getTranslate('menu')}}</strong>
+                </h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-wrap bd-navbar-nav pt-2 py-md-0 text-start text-custom">
+                    <!-- flex-row vardı -->
+                    <li class="nav-item col-md-auto d-lg-none">
+                        <a class="nav-link active" aria-current="page" routerLink="/">
+                            {{getTranslate("homePage")}}
+                        </a>
+                    </li>
+                    <li class="nav-item col-md-auto ">
+                        <a class="nav-link" aria-current="page" routerLink="/about-us">
+                            {{getTranslate("aboutUs")}}
+                        </a>
+                    </li>
+                    <li class="nav-item col-md-auto">
+                        <!-- her birinde col 6 vardı -->
+                        <a class="nav-link" aria-current="page" routerLink="/gallery">
+                            {{getTranslate("gallery")}}
+                        </a>
+                    </li>
+                    <li class="nav-item col-md-auto">
+                        <a class="nav-link" aria-current="page" routerLink="/references">
+                            {{getTranslate("references")}}
+                        </a>
+                    </li>
+                    <li class="nav-item col-md-auto">
+                        <a class="nav-link" aria-current="page" routerLink="/contact">
+                            {{getTranslate("contact")}}
+                        </a>
+                    </li>
+                </ul>
+
+                <hr class="d-md-none text-dark-50">
+
+                <ul class="navbar-nav flex-row flex-wrap ms-md-auto align-items-center text-start text-custom">
+
+                    <li class="nav-item col-12 col-lg-auto">
+                        <!-- SM -->
+                        <a class="nav-link d-lg-none" href="https://wa.me/905425190940" target="_blank" rel="noopener">
+                            <i class="fa fa-whatsapp" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                            <small class="ms-2 text-secondary">Whatsapp</small>
+                        </a>
+                    </li>
+
+                    <li class="nav-item col-12 col-lg-auto">
+                        <!-- SM -->
+                        <a class="nav-link d-lg-none" href="https://www.instagram.com/allentplastik/" target="_blank"
+                            rel="noopener">
+                            <i class="fa fa-instagram" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                            <small class="ms-2 text-secondary">İnstagram</small>
+                        </a>
+                    </li>
+
+                    <li class="nav-item col-12 col-lg-auto">
+                        <!-- SM -->
+                        <a class="nav-link d-lg-none" href="#" target="_blank" rel="noopener">
+                            <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                            <small class="ms-2 text-secondary">Facebook</small>
+                        </a>
+                    </li>
+
+                    <li class="nav-item col-12 col-lg-auto">
+                        <!-- MD - SM -->
+                        <a class="nav-link d-lg-none" href="https://www.linkedin.com/company/allent-plastik/"
+                            target="_blank" rel="noopener">
+                            <i class="fa fa-linkedin" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                            <small class="ms-2 text-secondary">Linkedin</small>
+                        </a>
+                    </li>
+
+                    <!-- SM -->
+                    <li class="nav-item col-12 col-lg-auto d-lg-none mb-3">
+                        <a class="nav-link" aria-current="page" routerLink="/contact">
+                            <ul class="friend-list sm">
+                                <li class="sm">
+                                    <div class="left" style="margin-right: 0px;">
+                                        <i class="fa fa-phone sm" style="font-size: 20px; margin-left: 0px;"></i>
+                                    </div>
+                                    <div class="right">
+                                        <p class="text-dark sm">+90 542 519 09 40</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+
+                    <!-- Language -->
+                    <li class="nav-item dropdown dropdown-menu-end ">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <!-- <i class="fa fa-cog mr-1"></i>  -->
+                            <span
+                                class="flag-icon flag-icon-{{getCurrentLanguage().flagCode}} flag-icon-squared"></span>
+                            {{getCurrentLanguage()!.languageName}}
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDropdown">
+                            <li *ngFor="let language of languages">
+                                <a class="dropdown-item" (click)="setLanguage(language.code)">
+                                    <span class="flag-icon flag-icon-{{language.flagCode}} flag-icon-squared"></span>
+                                    {{language.languageName}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

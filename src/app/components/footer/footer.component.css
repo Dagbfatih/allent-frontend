@@ -9,21 +9,54 @@
 } */
 
 .list-unstyled > li > a {
-  color: #495057;;
+  color: #495057;
   text-decoration: none;
 }
 
 .list-unstyled > li > a:hover {
-  color: #0D6EFD;
+  color: #0d6efd;
   text-decoration: underline;
 }
 
+.fa.fa-whatsapp {
+  color: #0dc143;
+}
+
+.fa.fa-facebook {
+  color: #4867aa;
+}
+
+.fa.fa-linkedin {
+  color: #0a66c2;
+}
+
+.fa.fa-instagram {
+  color: transparent;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background: -webkit-radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
 
 /* 
 .bg-custom {
   background-color: var(--app-footer-color);
 } */
 
-.text-custom{
-  color: #09437D;
+.text-custom {
+  color: #09437d;
 }

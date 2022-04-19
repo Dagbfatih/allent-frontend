@@ -20,7 +20,15 @@ export class NaviComponent implements OnInit {
 
   ngOnInit(): void {
     this.runOffcanvasJs();
+    this.runActiveStateManagement();
     this.getLanguages();
+  }
+
+  runActiveStateManagement() {
+    $(".nav-link").on("click", function(){
+      $(".nav-link.active").removeClass("active");
+      $(this).addClass("active");
+    });
   }
 
   runOffcanvasJs() {
