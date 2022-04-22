@@ -10,7 +10,7 @@ declare var $: any;
 })
 export class AppComponent {
   title = 'allent-frontend';
-  
+
   constructor(
     private translationService: TranslationService,
     private settingsService: SettingsService

@@ -29,6 +29,11 @@ export class NaviComponent implements OnInit {
       $(".nav-link.active").removeClass("active");
       $(this).addClass("active");
     });
+
+    $(".navbar-brand").on("click", function(){
+      $(".nav-link.active").removeClass("active");
+      $(this).addClass("active");
+    });
   }
 
   runOffcanvasJs() {

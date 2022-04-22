@@ -1,7 +1,9 @@
-import { MoldImage } from './../../models/entities/moldImage';
-import { MoldImageService } from './../../services/mold-image.service';
+import { RandomMoldServiceService } from './../../services/random-mold-service.service';
+import { Mold } from './../../models/entities/mold';
+import { MoldService } from './../../services/mold.service';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
+import randomItem from 'random-item';
 
 @Component({
   selector: 'app-home',
@@ -9,27 +11,21 @@ import { allTranslates } from 'src/app/services/translation.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  moldImages: MoldImage[] = [];
 
-  constructor(private moldImageService: MoldImageService) {}
+  constructor(
+    private moldService: MoldService,
+    private randomMoldService: RandomMoldServiceService
+  ) {}
 
   ngOnInit(): void {
-    this.getAllMoldImages();
   }
 
-  getAllMoldImages() {
-    this.moldImages = this.moldImageService.getAll().data;
+  get moldsByLg() {
+    return this.randomMoldService.getMoldsByLg();
   }
 
-  get moldImagesBySm() {
-    let images = this.moldImages.filter((m) => m.mode === 'sm');
-    console.log("images", images)
-    return images;
-  }
-
-  get moldImagesByLg() {
-    let images = this.moldImages.filter((m) => m.mode === 'lg');
-    return images;
+  get moldsBySm() {
+    return this.randomMoldService.getMoldsBySm();
   }
 
   getTranslate(key: string) {

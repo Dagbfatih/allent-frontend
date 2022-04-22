@@ -1,3 +1,4 @@
+<!-- START THE LG  -->
 <div class="container-fluid pe-0 ps-0 w-100 d-none d-lg-block">
 
     <!-- Carousel -->
@@ -6,24 +7,23 @@
             <div class="row g-0">
                 <div class="col-12 d-flex justify-content-center">
 
-                    <!-- Pc -->
+                    <!-- LG -->
                     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button *ngFor="let img of moldImagesByLg; let i = index;" type="button"
+                            <button *ngFor="let img of moldsByLg; let i = index;" type="button"
                                 data-bs-target="#myCarousel" [ngClass]="(i === 0) ? 'active' : ''"
                                 [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item" *ngFor="let img of moldImagesByLg; let i = index;"
+                            <div class="carousel-item" *ngFor="let mold of moldsByLg; let i = index;"
                                 [ngClass]="(i === 0) ? 'active' : ''">
-                                <img [src]="img.path" class="carousel-img w-100 h-100" alt="...">
+                                <img [src]="mold.path" class="carousel-img w-100 h-100" alt="...">
 
                                 <div class="container">
                                     <div class="carousel-caption text-start" style="bottom: initial; top: 40%;">
-                                        <h1>Plastik Enjeksiyon Kalıpçılığı</h1>
+                                        <h1>{{mold.name}}</h1>
                                         <p>
-                                            Müşterilerimizin ihtiyaç duyduğu plastik enjeksiyon kalıplarını<br>
-                                            mühendislik yaklaşımıyla ve kaliteden ödün vermeden yapıyoruz
+                                            {{mold.description}}
                                         </p>
                                         <!-- <p><a class="btn btn-lg btn-primary" href="#0">{{getTranslate('learnMore')}}</a></p> -->
                                     </div>
@@ -148,23 +148,23 @@
             <div class="row g-0">
                 <div class="col-12 d-flex justify-content-center">
 
-                    <!-- Phone -->
+                    <!-- SM -->
                     <div id="myCarouselForSm" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button *ngFor="let img of moldImagesBySm; let i = index;" type="button"
+                            <button *ngFor="let mold of moldsBySm; let i = index;" type="button"
                                 data-bs-target="#myCarouselForSm" [ngClass]="(i === 0) ? 'active' : ''"
                                 [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item" *ngFor="let img of moldImagesBySm; let i = index;"
+                            <div class="carousel-item" *ngFor="let mold of moldsBySm; let i = index;"
                                 [ngClass]="(i === 0) ? 'active' : ''">
-                                <img [src]="img.path" class="carousel-img w-100 h-100" alt="...">
+                                <img [src]="mold.path" class="carousel-img w-100 h-100" alt="...">
 
                                 <div class="container">
                                     <div class="carousel-caption text-center" style="bottom: auto; top: 0%;">
-                                        <h1>Plastik Enjeksiyon Kalıpçılığı</h1>
+                                        <h1>{{mold.name}}</h1>
                                         <p class="font-italic">
-                                            Müşterilerimizin ihtiyaç duyduğu plastik enjeksiyon kalıplarını yapıyoruz
+                                            {{mold.description}}
                                         </p>
                                     </div>
                                 </div>

@@ -142,7 +142,7 @@ ul.friend-list .right p.sm {
 @media (max-width: 992px) {
   .offcanvas {
     width: 250px !important;
-    top: 111px;
-    border-top: solid 2px var(--app-background-color);
+    top: 101px;
+    border-top: solid 1px var(--app-background-color);
   }
 }
