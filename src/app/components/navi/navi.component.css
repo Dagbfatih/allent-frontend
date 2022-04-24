@@ -128,6 +128,7 @@ ul.friend-list li:hover {
 
 ul.friend-list .left i.sm {
   margin-right: 0.5rem;
+  margin-bottom: 0px;
 }
 
 ul.friend-list .right h3.sm {
@@ -135,10 +136,11 @@ ul.friend-list .right h3.sm {
   margin-bottom: 0;
 }
 
-ul.friend-list .right p.sm {
+ul.friend-list .right a.sm {
   font-size: 14px;
   color: black;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  text-decoration: none;
 }
 
 /* Offcanvas */
