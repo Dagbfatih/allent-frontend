@@ -3,12 +3,12 @@
 }
 
 .navbar-custom {
-  height: 35px;
+  height: 45px;
 }
 
 @media (max-width: 992px) {
   .two {
-    top:35px
+    top: 45px;
   }
 }
 
@@ -65,11 +65,11 @@ ul.friend-list {
   -webkit-background-clip: text;
 }
 
-.fa.fa-sm{
-  font-size: 16px;
+.fa.fa-sm {
+  font-size: 20px;
 }
 
-.fa.fa-lg{
+.fa.fa-lg {
   font-size: 21px;
 }
 
@@ -106,6 +106,10 @@ ul.friend-list .right p.lg {
   font-size: 11px;
   color: black;
   margin: 0;
+}
+
+h4.font-arial {
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif;
 }
 
 /* SM */

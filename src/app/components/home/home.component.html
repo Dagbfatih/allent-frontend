@@ -10,21 +10,23 @@
                     <!-- LG -->
                     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button *ngFor="let img of moldsByLg; let i = index;" type="button"
+                            <button *ngFor="let slide of slidesByLg; let i = index;" type="button"
                                 data-bs-target="#myCarousel" [ngClass]="(i === 0) ? 'active' : ''"
                                 [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item" *ngFor="let mold of moldsByLg; let i = index;"
+                            <div class="carousel-item" *ngFor="let slide of slidesByLg; let i = index;"
                                 [ngClass]="(i === 0) ? 'active' : ''">
-                                <img [src]="mold.path" class="carousel-img w-100 h-100" alt="...">
+                                <img [src]="slide.path" class="carousel-img w-100 h-100" alt="...">
 
                                 <div class="container">
                                     <div class="carousel-caption text-start" style="bottom: initial; top: 40%;">
-                                        <h1>{{mold.name}}</h1>
-                                        <p>
-                                            {{mold.description}}
-                                        </p>
+                                        <h1 style="white-space: pre-wrap;">
+                                            {{slide.title}}
+                                        </h1>
+                                        <!-- <p>
+                                            {{slide.description}}
+                                        </p> -->
                                         <!-- <p><a class="btn btn-lg btn-primary" href="#0">{{getTranslate('learnMore')}}</a></p> -->
                                     </div>
                                 </div>
@@ -151,20 +153,20 @@
                     <!-- SM -->
                     <div id="myCarouselForSm" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button *ngFor="let mold of moldsBySm; let i = index;" type="button"
+                            <button *ngFor="let slide of slidesBySm; let i = index;" type="button"
                                 data-bs-target="#myCarouselForSm" [ngClass]="(i === 0) ? 'active' : ''"
                                 [attr.data-bs-slide-to]="i" aria-current="true" aria-label="Slide 1"></button>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item" *ngFor="let mold of moldsBySm; let i = index;"
+                            <div class="carousel-item" *ngFor="let slide of slidesBySm; let i = index;"
                                 [ngClass]="(i === 0) ? 'active' : ''">
-                                <img [src]="mold.path" class="carousel-img w-100 h-100" alt="...">
+                                <img [src]="slide.path" class="carousel-img w-100 h-100" alt="...">
 
                                 <div class="container">
                                     <div class="carousel-caption text-center" style="bottom: auto; top: 0%;">
-                                        <h1>{{mold.name}}</h1>
+                                        <h1>{{slide.title}}</h1>
                                         <p class="font-italic">
-                                            {{mold.description}}
+                                            {{slide.description}}
                                         </p>
                                     </div>
                                 </div>

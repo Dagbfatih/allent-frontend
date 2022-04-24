@@ -11,3 +11,19 @@
     -webkit-filter: grayscale(0);
   transition: 0.5;
 }
+
+/* SM */
+
+.img-sm {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  height: 150px;
+  transition: filter .4s ease-in-out;
+}
+
+.img-sm:hover, .img-sm:active {
+    filter: none;
+    -webkit-filter: grayscale(0);
+  transition: 0.5;
+}
+

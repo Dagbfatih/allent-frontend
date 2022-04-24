@@ -11,7 +11,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AgmCoreModule } from '@agm/core';
-import { RandomMoldServiceService } from './services/random-mold-service.service';
+import { RandomSlideGeneratorService } from './services/random-slide-generator.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { RandomMoldServiceService } from './services/random-mold-service.service
       apiKey: 'AIzaSyDFweyUfI7ZqBnsQE2GOfwusX5HzbaU7mk',
     }),
   ],
-  providers: [RandomMoldServiceService],
+  providers: [RandomSlideGeneratorService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

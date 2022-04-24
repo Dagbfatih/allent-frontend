@@ -1,4 +1,4 @@
-import { RandomMoldServiceService } from './../../services/random-mold-service.service';
+import { RandomSlideGeneratorService } from '../../services/random-slide-generator.service';
 import { Mold } from './../../models/entities/mold';
 import { MoldService } from './../../services/mold.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,21 +11,18 @@ import randomItem from 'random-item';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
   constructor(
-    private moldService: MoldService,
-    private randomMoldService: RandomMoldServiceService
+    private randomSlideGenerator: RandomSlideGeneratorService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  get slidesByLg() {
+    return this.randomSlideGenerator.getSlidesByLg();
   }
 
-  get moldsByLg() {
-    return this.randomMoldService.getMoldsByLg();
-  }
-
-  get moldsBySm() {
-    return this.randomMoldService.getMoldsBySm();
+  get slidesBySm() {
+    return this.randomSlideGenerator.getSlidesBySm();
   }
 
   getTranslate(key: string) {
