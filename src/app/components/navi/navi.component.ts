@@ -4,6 +4,7 @@ import { Language } from './../../models/entities/language';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 import * as $ from 'jquery';
+import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navi',
@@ -15,7 +16,9 @@ export class NaviComponent implements OnInit {
 
   constructor(
     private languageService: LanguageService,
-    private settingsService: SettingsService
+    private settingsService: SettingsService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -25,14 +28,15 @@ export class NaviComponent implements OnInit {
   }
 
   runActiveStateManagement() {
-    $(".nav-link").on("click", function(){
-      $(".nav-link.active").removeClass("active");
-      $(this).addClass("active");
-    });
-
-    $(".navbar-brand").on("click", function(){
-      $(".nav-link.active").removeClass("active");
-      $(this).addClass("active");
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        $('.nav-link.nav-link-custom.active').removeClass('active');
+        $('.nav-link.nav-link-custom').attr('routerLink', function (i, val) {
+          if (val === event.url) {
+            $(this).addClass('active');
+          }
+        });
+      }
     });
   }
 
@@ -47,6 +51,12 @@ export class NaviComponent implements OnInit {
         offcanvasCollapse?.classList.toggle('open');
       });
     })();
+  }
+
+  navigate(url: string, fragment: string) {
+    this.router.navigate([url], {
+      fragment: fragment,
+    });
   }
 
   getCurrentLanguage(): Language {

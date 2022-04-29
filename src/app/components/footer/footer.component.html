@@ -1,7 +1,7 @@
 <footer>
     <div class="bd-footer bg-light text-custom pt-5">
         <!-- bg-light -->
-        <div class="container py-5">
+        <div class="container pt-5 pb-3">
             <div class="row">
                 <div class="col-lg-3 col-sm-12 mb-3">
                     <ul class="list-unstyled small">
@@ -10,12 +10,11 @@
                             aria-label="Allent Plastik">
                             <img src="assets/logo/allent_logo_without_text.png" height="32"
                                 class="d-inline-block align-text-top me-2">
-                            <h3 class=" text-custom">Allent Plastik </h3>
+                            <h3 class="text-custom">Allent Plastik</h3>
                             <!-- San. ve Tic. Ltd. Şti. -->
                         </a>
                         <li class="mb-2 text-muted">
-                            Allent Plastik Kalıp Sanayi Ticaret Limited Şirketi, 2019 yılında Konya' da
-                            Mak. Müh. Bülent Dağ tarafından iki ortaklı olarak kurulmuştur.
+                            {{getTranslate('footerDescriptionFromDb')}}
                         </li>
                         <!-- <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
                               target="_blank" rel="license noopener">MIT</a>, docs <a
@@ -24,53 +23,98 @@
                       <li class="mb-2">Currently v5.1.0.</li> -->
                     </ul>
                 </div>
-                <!-- <div class="col-6 col-lg-1 offset-lg-1 mb-3">
-                    <h3>{{getTranslate("links")}}</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <a class="link-dark link" href="/soruluk-frontend/give-feedback">Feedback</a>
-                        </li>
-                    </ul>
-                </div> -->
-                <div class="col-12 offset-lg-2 col-lg-2 mb-3">
+
+                <!-- Social -->
+                <div class="col-12 offset-lg-1 col-lg-2 mb-3">
                     <h3>{{getTranslate("social")}}</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2">
                             <a class="link-dark link" href="https://wa.me/905425190940">
-                                <i class="fa fa-whatsapp" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                                <i class="fa fa-whatsapp" style="font-size: 21px; min-width: 18px;"
+                                    aria-hidden="true"></i>
                                 Whatsapp
                             </a>
                         </li>
                         <li class="mb-2">
                             <a class="link-dark link" href="https://www.instagram.com/allentplastik/">
-                                <i class="fa fa-instagram" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" style="font-size: 21px; min-width: 18px;"
+                                    aria-hidden="true"></i>
                                 İnstagram
                             </a>
                         </li>
                         <li class="mb-2">
                             <a class="link-dark link" href="#">
-                                <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                                <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;"
+                                    aria-hidden="true"></i>
                                 Facebook
                             </a>
                         </li>
                         <li class="mb-2">
                             <a class="link-dark link" href="https://www.linkedin.com/company/allent-plastik/">
-                                <i class="fa fa-linkedin" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
+                                <i class="fa fa-linkedin" style="font-size: 21px; min-width: 18px;"
+                                    aria-hidden="true"></i>
                                 Linkedin
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-3 offset-lg-2 mb-3">
+
+                <!-- Menu -->
+                <div class="col-12 col-lg-2 mb-3">
+                    <h3>{{getTranslate("menu")}}</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a class="link-dark link" (click)="navigate('/about-us', 'machine-parkour')">
+                                Makine Parkuru
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="link-dark link" (click)="navigate('/about-us', 'account-info')">
+                                Banka Hesap Bilgileri
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="link-dark link" (click)="navigate('/about-us', 'corporate-info')">
+                                Kurumsal Bilgiler
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="link-dark link" (click)="navigate('/cookie-policy', 'cookie-policy')">
+                                Çerez Politikası
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-12 col-lg-3 offset-lg-1 mb-3">
                     <h3>{{getTranslate("contact")}}</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <!-- <small>Contact mail: </small> -->
-                            <a class="link-dark unlink">info@allentplastik.com </a>
+                            <a class="link-dark unlink" href="mailto:{{getTranslate('email2FromDb')}}">
+                                <i class="fa fa-envelope me-1"></i>
+                                {{getTranslate('email2FromDb')}}
+                            </a>
                         </li>
                         <li class="mb-2">
-                            <!-- <small>Personal mail: </small> -->
-                            <a class="link-dark unlink">dagbulent@hotmail.com</a>
+                            <a class="link-dark unlink" href="mailto:{{getTranslate('email1FromDb')}}">
+                                <i class="fa fa-envelope me-1"></i>
+                                {{getTranslate('email1FromDb')}}
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="link-dark unlink" href="tel:{{getTranslate('gsmFromDb')}}">
+                                <i class="fa fa-envelope me-1"></i>
+                                {{getTranslate('gsmFromDb')}}
+                                <span class="badge bg-light text-dark">{{getTranslate('personal')}}</span>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="link-dark unlink" href="tel:{{getTranslate('phoneNumberFromDb')}}">
+                                <i class="fa fa-envelope me-1"></i>
+                                {{getTranslate('phoneNumberFromDb')}}
+                                <span class="badge bg-light text-dark">{{getTranslate('company')}}</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +126,26 @@
                     </ul>
                 </div> -->
             </div>
-        </div>
 
+            <hr>
+
+            <div class="container">
+                <div class="row" style="font-size: 14px;">
+                    <div class="col-md-8 col-sm-12 text-start col-xs-6 ">
+                        <p class="font-italic text-muted text-start">&copy; Copyrights
+                            <a class="link-dark unlink" href="#">allentplastik.com</a>
+                            All rights reserved.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 text-start col-xs-6">
+                        <p class="font-italic text-muted">
+                            Designed by
+                            <a class="link-dark unlink" href="mailto:dagbfatih@hotmail.com">&copy;Dagbfatih</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>

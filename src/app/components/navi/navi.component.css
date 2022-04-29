@@ -22,7 +22,7 @@ ul.friend-list {
 }
 
 .text-custom > li > a {
-  color: #09437db9;
+  color: #07376B;
   font-weight: 400;
 }
 
@@ -109,7 +109,7 @@ ul.friend-list .right p.lg {
 }
 
 h4.font-arial {
-  font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+  font-family: Arial Black, Arial Bold, Gadget, sans-serif;
 }
 
 /* SM */
@@ -136,6 +136,11 @@ ul.friend-list .right h3.sm {
   margin-bottom: 0;
 }
 
+ul.friend-list .right p.sm {
+  font-size: 14px;
+  color: black;
+}
+
 ul.friend-list .right a.sm {
   font-size: 14px;
   color: black;
@@ -148,7 +153,11 @@ ul.friend-list .right a.sm {
 @media (max-width: 992px) {
   .offcanvas {
     width: 250px !important;
-    top: 101px;
-    border-top: solid 1px var(--app-background-color);
+    top: 121px;
+    box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
   }
+}
+
+.dropdown-item-text {
+  display: block;
 }

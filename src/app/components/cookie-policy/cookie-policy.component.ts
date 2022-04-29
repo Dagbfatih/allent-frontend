@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
+  selector: 'app-cookie-policy',
+  templateUrl: './cookie-policy.component.html',
+  styleUrls: ['./cookie-policy.component.css'],
 })
-export class ContactComponent implements OnInit {
-
+export class CookiePolicyComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

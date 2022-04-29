@@ -99,28 +99,60 @@
             <ul class="navbar-nav flex-wrap bd-navbar-nav pt-2 py-md-0 text-start text-custom">
                 <!-- flex-row vardı -->
                 <li class="nav-item col-md-auto d-lg-none">
-                    <a class="nav-link" aria-current="page" routerLink="/">
+                    <a class="nav-link nav-link-custom" aria-current="page" routerLink="/">
                         {{getTranslate("homePage")}}
                     </a>
                 </li>
-                <li class="nav-item col-md-auto ">
-                    <a class="nav-link" aria-current="page" routerLink="/about-us">
+                <li class="nav-item col-md-auto">
+                    <a class="nav-link nav-link-custom" aria-current="page" routerLink="/about-us">
                         {{getTranslate("aboutUs")}}
                     </a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Hizmetlerimiz
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" style="white-space: normal;"
+                                (click)="navigate('/our-services/','plastic-injection-molding')">
+                                Plastik Enjeksiyon Kalıpçılığı
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" style="white-space: normal;"
+                                (click)="navigate('/our-services/','industrial-product-development')">
+                                Endüstriyel Ürün Geliştirme
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" style="white-space: normal;"
+                                (click)="navigate('/our-services/','manufacture-of-plastic-products')">
+                                Plastik Ürün Üretimi
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item col-md-auto">
                     <!-- her birinde col 6 vardı -->
-                    <a class="nav-link" aria-current="page" routerLink="/gallery">
+                    <a class="nav-link nav-link-custom" aria-current="page" routerLink="/gallery">
                         {{getTranslate("gallery")}}
                     </a>
                 </li>
                 <li class="nav-item col-md-auto">
-                    <a class="nav-link" aria-current="page" routerLink="/references">
+                    <a class="nav-link nav-link-custom" aria-current="page" routerLink="/references">
                         {{getTranslate("references")}}
                     </a>
                 </li>
                 <li class="nav-item col-md-auto">
-                    <a class="nav-link" aria-current="page" routerLink="/contact">
+                    <a class="nav-link nav-link-custom" aria-current="page" routerLink="/contact">
                         {{getTranslate("contact")}}
                     </a>
                 </li>
@@ -164,7 +196,7 @@
 
                 <!-- LG -->
                 <li class="nav-item col-6 col-lg-auto d-none d-lg-block">
-                    <a class="nav-link p-2" aria-current="page" routerLink="/tests/details">
+                    <a class="nav-link p-2" aria-current="page">
                         <ul class="friend-list">
                             <li class="lg">
                                 <div class="left" style="margin-right: 0px;">
@@ -207,39 +239,60 @@
         <!-- ------------------------------------------------------------------------------------------------------ -->
 
         <!-- SM NAVBAR -->
-        <div class="offcanvas offcanvas-end" data-bs-backdrop="false" tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel">
-            <!-- <div class="offcanvas-header">
-                <h5 class="offcanvas-title text-custom" id="offcanvasNavbarLabel">
-                    <strong>{{getTranslate('menu')}}</strong>
-                </h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div> -->
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+            id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-wrap bd-navbar-nav pt-2 py-md-0 text-start text-custom">
                     <li class="nav-item col-md-auto d-lg-none">
-                        <a class="nav-link active" aria-current="page" routerLink="/">
+                        <a class="nav-link nav-link-home nav-link-custom active" data-bs-dismiss="offcanvas"
+                            aria-current="page" routerLink="/">
                             {{getTranslate("homePage")}}
                         </a>
                     </li>
                     <li class="nav-item col-md-auto ">
-                        <a class="nav-link" aria-current="page" routerLink="/about-us">
+                        <a class="nav-link nav-link-custom" data-bs-dismiss="offcanvas" aria-current="page"
+                            routerLink="/about-us">
                             {{getTranslate("aboutUs")}}
                         </a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
+                                    (click)="navigate('/our-services','plastic-injection-molding')">Plastik
+                                    Enjeksiyon Kalıpçılığı</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
+                                    (click)="navigate('/our-services/','industrial-product-development')">Endüstriyel
+                                    Ürün Geliştirme</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
+                                    (click)="navigate('/our-services/','manufacture-of-plastic-products')">Plastik Ürün
+                                    Üretimi</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item col-md-auto">
-                        <a class="nav-link" aria-current="page" routerLink="/gallery">
+                        <a class="nav-link nav-link-custom" data-bs-dismiss="offcanvas" aria-current="page"
+                            routerLink="/gallery">
                             {{getTranslate("gallery")}}
                         </a>
                     </li>
                     <li class="nav-item col-md-auto">
-                        <a class="nav-link" aria-current="page" routerLink="/references">
+                        <a class="nav-link nav-link-custom" data-bs-dismiss="offcanvas" aria-current="page"
+                            routerLink="/references">
                             {{getTranslate("references")}}
                         </a>
                     </li>
                     <li class="nav-item col-md-auto">
-                        <a class="nav-link" aria-current="page" routerLink="/contact">
+                        <a class="nav-link nav-link-custom" data-bs-dismiss="offcanvas" aria-current="page"
+                            routerLink="/contact">
                             {{getTranslate("contact")}}
                         </a>
                     </li>
@@ -251,7 +304,8 @@
 
                     <li class="nav-item col-12 col-lg-auto">
                         <!-- SM -->
-                        <a class="nav-link d-lg-none" href="https://wa.me/905425190940" target="_blank" rel="noopener">
+                        <a class="nav-link d-lg-none" data-bs-dismiss="offcanvas" href="https://wa.me/905425190940"
+                            target="_blank" rel="noopener">
                             <i class="fa fa-whatsapp" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
                             <small class="ms-2 text-secondary">Whatsapp</small>
                         </a>
@@ -259,8 +313,8 @@
 
                     <li class="nav-item col-12 col-lg-auto">
                         <!-- SM -->
-                        <a class="nav-link d-lg-none" href="https://www.instagram.com/allentplastik/" target="_blank"
-                            rel="noopener">
+                        <a class="nav-link d-lg-none" data-bs-dismiss="offcanvas"
+                            href="https://www.instagram.com/allentplastik/" target="_blank" rel="noopener">
                             <i class="fa fa-instagram" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
                             <small class="ms-2 text-secondary">İnstagram</small>
                         </a>
@@ -268,7 +322,8 @@
 
                     <li class="nav-item col-12 col-lg-auto">
                         <!-- SM -->
-                        <a class="nav-link d-lg-none" href="#" target="_blank" rel="noopener">
+                        <a class="nav-link d-lg-none" data-bs-dismiss="offcanvas" href="#" target="_blank"
+                            rel="noopener">
                             <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
                             <small class="ms-2 text-secondary">Facebook</small>
                         </a>
@@ -276,8 +331,8 @@
 
                     <li class="nav-item col-12 col-lg-auto">
                         <!-- MD - SM -->
-                        <a class="nav-link d-lg-none" href="https://www.linkedin.com/company/allent-plastik/"
-                            target="_blank" rel="noopener">
+                        <a class="nav-link d-lg-none" data-bs-dismiss="offcanvas"
+                            href="https://www.linkedin.com/company/allent-plastik/" target="_blank" rel="noopener">
                             <i class="fa fa-linkedin" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
                             <small class="ms-2 text-secondary">Linkedin</small>
                         </a>
@@ -300,7 +355,7 @@
                     </li>
 
                     <!-- Language -->
-                    <li class="nav-item dropdown dropdown-menu-end ">
+                    <li class="nav-item dropdown dropdown-menu-end">
                         <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <!-- <i class="fa fa-cog mr-1"></i>  -->
@@ -317,6 +372,7 @@
                                 </a>
                             </li>
                         </ul>
+
                     </li>
                 </ul>
             </div>

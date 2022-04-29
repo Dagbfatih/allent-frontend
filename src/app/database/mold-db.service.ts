@@ -1,4 +1,4 @@
-import { Mold } from './../models/entities/mold';
+import { Mold } from '../models/entities/mold';
 import { Injectable } from '@angular/core';
 import { DbServiceRepositoryBase } from '../core/database/db.service.repository.base';
 

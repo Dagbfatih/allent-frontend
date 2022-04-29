@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
+  selector: 'app-account-info',
+  templateUrl: './account-info.component.html',
+  styleUrls: ['./account-info.component.css'],
 })
-export class ContactComponent implements OnInit {
-
+export class AccountInfoComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

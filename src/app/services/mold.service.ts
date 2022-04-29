@@ -1,4 +1,4 @@
-import { MoldDbService } from '../database/mold-image-db.service';
+import { MoldDbService } from '../database/mold-db.service';
 import { Mold } from '../models/entities/mold';
 import { Injectable } from '@angular/core';
 import { ServiceRepositoryLocalBase } from '../core/services/local-database/service.repository.base.local';

@@ -11,9 +11,7 @@ import randomItem from 'random-item';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    private randomSlideGenerator: RandomSlideGeneratorService
-  ) {}
+  constructor(private randomSlideGenerator: RandomSlideGeneratorService) {}
 
   ngOnInit(): void {}
 

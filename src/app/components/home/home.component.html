@@ -16,12 +16,12 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item" *ngFor="let slide of slidesByLg; let i = index;"
-                                [ngClass]="(i === 0) ? 'active' : ''">
+                                [ngClass]="(i === 0) ? 'active' : ''" data-bs-interval="5000">
                                 <img [src]="slide.path" class="carousel-img w-100 h-100" alt="...">
 
                                 <div class="container">
                                     <div class="carousel-caption text-start" style="bottom: initial; top: 40%;">
-                                        <h1 style="white-space: pre-wrap;">
+                                        <h1 style="white-space: pre-line;">
                                             {{slide.title}}
                                         </h1>
                                         <!-- <p>
@@ -54,30 +54,26 @@
         <div class="row featurette" style="margin-top: 5%;">
             <div class="col-md-7">
                 <h2 class="featurette-heading" id="0">
-                    Plastik Enjeksiyon Kalıpçılığında
-                    <span class="text-muted">Yılların Tecrübesi.</span>
+                    {{getTranslate('homePageP1Lead')}}
+                    <span class="text-muted">{{getTranslate('homePageP1LeadTextMuted')}}.</span>
                 </h2>
-                <p class="lead">Müşterilerimizin ihtiyaç duyduğu plastik enjeksiyon kalıplarını mühendislik yaklaşımıyla
-                    ve kaliteden ödün vermeden yapıyoruz. Sahip olduğumuz ürün geliştirme tecrübesi sayesinde talep
-                    edilen
-                    kalıpların üretiminden önce müşterilerimizi olası sorunlar hakkında bilgilendiriyoruz ve
-                    yönlendiriyoruz.
-                    Uzun yıllar başarıyla yaptığımız kalıp türleri;
+                <p class="lead">{{getTranslate('homePageP1')}}
                 </p>
                 <ol class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <p class="lead">Plastik su filtrelerine ait parçalar</p>
+                        <p class="lead">{{getTranslate('homePageP1/l1')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Plastik boru ek parçaları</p>
+                        <p class="lead">{{getTranslate('homePageP1/l2')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">İnce cidarlı rijit plastik ambalajlar...</p>
+                        <p class="lead">{{getTranslate('homePageP1/l3')}}...</p>
                     </li>
                 </ol>
             </div>
             <div class="col-md-5">
-                <img src="assets/images/modern-flat-design-1.png" alt="" width="500" height="500" class="img-fluid">
+                <!-- <img src="assets/images/modern-flat-design-1.png" alt="" width="500" height="500" class="img-fluid"> -->
+                <img src="assets/images/white-desk.png" alt="" width="500" height="500" class="img-fluid">
             </div>
         </div>
 
@@ -86,27 +82,23 @@
         <div class="row featurette" id="1">
             <div class="col-md-7 order-md-2">
                 <h2 class="featurette-heading" id="1">
-                    Endüstriyel Ürün Geliştirme
+                    {{getTranslate('homePageP2Lead')}}
                     <!-- <span class="text-muted">See for yourself.</span> -->
                 </h2>
-                <p class="lead">Üretilebilir, uygun maliyetli, kullanışlı, estetik, mukavemetli, işlevsel, uzun ömürlü,
-                    ergonomik, farklı ve özgün ürün tasarımlarına ihtiyacınız varsa bizimle iletişime geçebilirsiniz.
-                    Bugüne kadar tecrübe etme imkânı bulduğumuz birkaç örnek;
+                <p class="lead">{{getTranslate('homePageP2')}}
                 </p>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <p class="lead">Plastik hidrosiklon tasarımı ve akış analizleri</p>
+                        <p class="lead">{{getTranslate('homePageP2/l1')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Plastik venturi tasarımı ve akış analizleri</p>
+                        <p class="lead">{{getTranslate('homePageP2/l2')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Büyük hacimli, basınca dayanıklı, enjeksiyonluk plastik tank tasarımı ve
-                            mukavemet
-                            analizleri</p>
+                        <p class="lead">{{getTranslate('homePageP2/l3')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Plastik kelepçe tasarımı ve mukavemet analizleri...</p>
+                        <p class="lead">{{getTranslate('homePageP2/l4')}}</p>
                     </li>
                 </ul>
             </div>
@@ -119,12 +111,11 @@
 
         <div class="row featurette" id="2">
             <div class="col-md-7">
-                <h2 class="featurette-heading" id="2">Plastik Ürün Üretimi,
-                    <span class="text-muted">Siz Hayal Edin Biz Yapalım.</span>
+                <h2 class="featurette-heading" id="2">{{getTranslate('homePageP3Lead')}},
+                    <span class="text-muted">{{getTranslate('homePageP3LeadTextMuted')}}.</span>
                 </h2>
                 <p class="lead">
-                    Sadece ürün tasarımı veya ürünün kalıplanması değil de nihai ürün ihtiyacınız varsa bizimle
-                    iletişime geçebilirsiniz.
+                    {{getTranslate('homePageP3')}}
                 </p>
             </div>
             <div class="col-md-5">
@@ -159,15 +150,15 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item" *ngFor="let slide of slidesBySm; let i = index;"
-                                [ngClass]="(i === 0) ? 'active' : ''">
+                                [ngClass]="(i === 0) ? 'active' : ''" data-bs-interval="5000">
                                 <img [src]="slide.path" class="carousel-img w-100 h-100" alt="...">
 
                                 <div class="container">
                                     <div class="carousel-caption text-center" style="bottom: auto; top: 0%;">
                                         <h1>{{slide.title}}</h1>
-                                        <p class="font-italic">
+                                        <!-- <p class="font-italic">
                                             {{slide.description}}
-                                        </p>
+                                        </p> -->
                                     </div>
                                 </div>
                             </div>
@@ -203,25 +194,20 @@
             </div>
             <div class="col-md-7">
                 <h2 class="featurette-heading" id="0">
-                    Plastik Enjeksiyon Kalıpçılığında
-                    <span class="text-muted">Yılların Tecrübesi.</span>
+                    {{getTranslate('homePageP1Lead')}}
+                    <span class="text-muted">{{getTranslate('homePageP1LeadTextMuted')}}.</span>
                 </h2>
-                <p class="lead">Müşterilerimizin ihtiyaç duyduğu plastik enjeksiyon kalıplarını mühendislik yaklaşımıyla
-                    ve kaliteden ödün vermeden yapıyoruz. Sahip olduğumuz ürün geliştirme tecrübesi sayesinde talep
-                    edilen
-                    kalıpların üretiminden önce müşterilerimizi olası sorunlar hakkında bilgilendiriyoruz ve
-                    yönlendiriyoruz.
-                    Uzun yıllar başarıyla yaptığımız kalıp türleri;
+                <p class="lead">{{getTranslate('homePageP1')}}
                 </p>
                 <ol class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <p class="lead">Plastik su filtrelerine ait parçalar</p>
+                        <p class="lead">{{getTranslate('homePageP1/l1')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Plastik boru ek parçaları</p>
+                        <p class="lead">{{getTranslate('homePageP1/l2')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">İnce cidarlı rijit plastik ambalajlar...</p>
+                        <p class="lead">{{getTranslate('homePageP1/l3')}}...</p>
                     </li>
                 </ol>
             </div>
@@ -236,27 +222,24 @@
             </div>
             <div class="col-md-7 order-md-2">
                 <h2 class="featurette-heading" id="1">
-                    Endüstriyel Ürün Geliştirme
+                    {{getTranslate('homePageP2Lead')}}
                     <!-- <span class="text-muted">See for yourself.</span> -->
                 </h2>
-                <p class="lead">Üretilebilir, uygun maliyetli, kullanışlı, estetik, mukavemetli, işlevsel, uzun ömürlü,
-                    ergonomik, farklı ve özgün ürün tasarımlarına ihtiyacınız varsa bizimle iletişime geçebilirsiniz.
-                    Bugüne kadar tecrübe etme imkânı bulduğumuz birkaç örnek;
+                <p class="lead">
+                    {{getTranslate('homePageP2')}}
                 </p>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <p class="lead">Plastik hidrosiklon tasarımı ve akış analizleri</p>
+                        <p class="lead">{{getTranslate('homePageP2/l1')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Plastik venturi tasarımı ve akış analizleri</p>
+                        <p class="lead">{{getTranslate('homePageP2/l2')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Büyük hacimli, basınca dayanıklı, enjeksiyonluk plastik tank tasarımı ve
-                            mukavemet
-                            analizleri</p>
+                        <p class="lead">{{getTranslate('homePageP2/l3')}}</p>
                     </li>
                     <li class="list-group-item">
-                        <p class="lead">Plastik kelepçe tasarımı ve mukavemet analizleri...</p>
+                        <p class="lead">{{getTranslate('homePageP2/l4')}}...</p>
                     </li>
                 </ul>
             </div>
@@ -270,12 +253,11 @@
                     class="img-fluid img-sm">
             </div>
             <div class="col-md-7">
-                <h2 class="featurette-heading" id="2">Plastik Ürün Üretimi,
-                    <span class="text-muted">Siz Hayal Edin Biz Yapalım.</span>
+                <h2 class="featurette-heading" id="2">{{getTranslate('homePageP3Lead')}},
+                    <span class="text-muted">{{getTranslate('homePageP3LeadTextMuted')}}.</span>
                 </h2>
                 <p class="lead">
-                    Sadece ürün tasarımı veya ürünün kalıplanması değil de nihai ürün ihtiyacınız varsa bizimle
-                    iletişime geçebilirsiniz.
+                    {{getTranslate('homePageP3')}}
                 </p>
             </div>
         </div>
