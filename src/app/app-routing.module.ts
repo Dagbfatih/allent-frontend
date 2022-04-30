@@ -1,3 +1,6 @@
+import { DownloadableContentComponent } from './components/downloadable-content/downloadable-content.component';
+import { MachineParkourComponent } from './components/machine-parkour/machine-parkour.component';
+import { CorporateInfoComponent } from './components/corporate-info/corporate-info.component';
 import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
 import { AccountInfoComponent } from './components/account-info/account-info.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
@@ -10,10 +13,10 @@ import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 
 export const routerOptions: ExtraOptions = {
-  useHash: false,
+  onSameUrlNavigation: 'reload',
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 135],
   scrollPositionRestoration: 'enabled',
+  scrollOffset: [0, 135],
 };
 
 export const routes: Routes = [
@@ -53,6 +56,18 @@ export const routes: Routes = [
   {
     path: 'cookie-policy',
     component: CookiePolicyComponent,
+  },
+  {
+    path: 'corporate-info',
+    component: CorporateInfoComponent,
+  },
+  {
+    path: 'machine-parkour',
+    component: MachineParkourComponent,
+  },
+  {
+    path: 'downloadable-content',
+    component: DownloadableContentComponent,
   },
 ];
 

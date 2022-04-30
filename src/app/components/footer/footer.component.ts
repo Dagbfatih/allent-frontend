@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +9,10 @@ import { allTranslates } from 'src/app/services/translation.service';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private navigationService: NavigationService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -16,6 +20,10 @@ export class FooterComponent implements OnInit {
     this.router.navigate([url], {
       fragment: fragment,
     });
+  }
+
+  navigateWithElement(url: string, elementId: string) {
+    this.router.navigate([url]);
   }
 
   getTranslate(key: string) {

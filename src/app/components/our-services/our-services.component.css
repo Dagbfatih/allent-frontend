@@ -26,3 +26,9 @@
 .bg-custom {
   background-color: var(--app-background-color);
 }
+
+.featurette-heading{
+  color: white;
+  margin-top: 5rem;
+}
+

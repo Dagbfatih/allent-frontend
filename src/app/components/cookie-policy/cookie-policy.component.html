@@ -2,121 +2,920 @@
     <!-- <h1 class="display-4">Çerez Politikası</h1>
     <hr class=""> -->
 
+    <div *ngIf="getLanguageCode() === 'tr-TR'" class="detail-editor text row" data-aos="fade-right">
+        <h1 class="bd-title" style="font-size: 3rem;">Cookie Gizlilik Politikası</h1>
 
-    <div class="bd-head mb-5">
-        <div class="text-start">
-            <h1 class="bd-title" id="cookie-policy" style="font-size: 3rem;">Çerez Politikası</h1>
+        <p>İşbu Gizlilik Politikası&rsquo;nın amacı,&nbsp;<strong>ALLENT Plastik Kalıp Sanayi ve Ticaret Ltd. Şti.
+                &nbsp;(&ldquo;<strong>Şirket</strong>&rdquo;)/ </strong>tarafından işletilmekte olan <a href="https://www.allentplastik.com/"
+                target="_blank">https://www.allentplastik.com/<strong>&nbsp;</strong></a>internet
+            sitesinin işletilmesi sırasında Platform kullanıcıları/&uuml;yeleri/ziyaret&ccedil;ileri
+            (&ldquo;<strong>Veri Sahibi</strong>&rdquo;) tarafından Şirket ile paylaşılan veya Şirket&rsquo;in, Veri
+            Sahibi&rsquo;nin Platform&rsquo;u kullanımı sırasında &uuml;rettiği kişisel verilerin kullanımına
+            ilişkin koşul ve şartları tespit etmektir.</p>
+
+        <p><strong>Veri Sahibi, işbu Gizlilik Politikası ile kişisel verilerinin işlenmesine ilişkin olarak
+                aydınlatılmış olduğunu ve kişisel verilerinin burada belirtilen şekilde kullanımına muvafakat
+                ettiğini beyan eder.</strong></p>
+
+        <p><strong>Hangi Veriler İşlenmektedir?</strong></p>
+
+        <p>İşbu başlık altında, Şirket tarafından işlenen ve 6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca
+            kişisel veri sayılan verilerin hangileri olduğu sıralanmıştır. Aksi a&ccedil;ık&ccedil;a
+            belirtilmedik&ccedil;e, işbu Gizlilik Politikası kapsamında arz edilen h&uuml;k&uuml;m ve koşullar
+            kapsamında &ldquo;<strong>kişisel veri</strong>&rdquo; ifadesi aşağıda yer alan bilgileri
+            kapsayacaktır:&nbsp;</p>
+
+        <ul>
+            <li>M&uuml;şteri Bilgisi</li>
+            <li>Cihaz Bilgisi</li>
+            <li>Davranışlar</li>
+            <li>Demografik Bilgiler</li>
+        </ul>
+
+        <p>Kişisel Verilerin Korunması Kanunu&rsquo;nun 3. ve 7. maddeleri dairesince, geri
+            d&ouml;nd&uuml;r&uuml;lemeyecek şekilde anonim hale getirilen veriler, anılan kanun h&uuml;k&uuml;mleri
+            uyarınca kişisel veri olarak kabul edilmeyecek ve bu verilere ilişkin işleme faaliyetleri işbu Gizlilik
+            Politikası h&uuml;k&uuml;mleri ile bağlı olmaksızın ger&ccedil;ekleştirilecektir.</p>
+
+        <p><strong>Veriler Hangi Ama&ccedil;larla Kullanılmaktadır?</strong></p>
+
+        <p>Şirket, kişisel verileri,&nbsp;<strong>Şirket tarafından sunulan &uuml;r&uuml;n ve hizmetlerin ilgili
+                kişilerin beğeni, kullanım alışkanlıkları ve ihtiya&ccedil;larına g&ouml;re &ouml;zelleştirerek
+                ilgili kişilere &ouml;nerilmesi; doğrudan ve dolaylı pazarlama faaliyetleri kapsamında kullanılması
+                ve bu ama&ccedil;larla Şirket&rsquo;in temsilcileri, &ccedil;&ouml;z&uuml;m ortakları ve hizmet
+                aldığı &uuml;&ccedil;&uuml;nc&uuml; kişilere aktarılması i&ccedil;in&nbsp;işleyebilecektir.</strong>
+        </p>
+
+        <p>Şirket, Kişisel Verilerin Korunması Kanunu&rsquo;nun 5 ve 8. maddeleri uyarınca ve/veya ilgili
+            mevzuattaki istisnaların varlığı halinde kişisel verileri Veri Sahibi&rsquo;nin ayrıca rızasını
+            almaksızın işleyebilecek ve &uuml;&ccedil;&uuml;nc&uuml; kişilerle paylaşabilecektir. Bu durumların
+            başlıcaları aşağıda belirtilmiştir:</p>
+
+        <ul>
+            <li>Kanunlarda a&ccedil;ık&ccedil;a &ouml;ng&ouml;r&uuml;lmesi,</li>
+            <li>Fiili imk&acirc;nsızlık nedeniyle rızasını a&ccedil;ıklayamayacak durumda bulunan veya rızasına
+                hukuki ge&ccedil;erlilik tanınmayan kişinin kendisinin ya da bir başkasının hayatı veya beden
+                b&uuml;t&uuml;nl&uuml;ğ&uuml;n&uuml;n korunması i&ccedil;in zorunlu olması,</li>
+            <li>Veri Sahibi ile Şirket arasında herhangi bir s&ouml;zleşmenin kurulması veya ifasıyla doğrudan
+                doğruya ilgili olması kaydıyla, kişisel verilerin işlenmesinin gerekli olması,</li>
+            <li>Şirketin hukuki y&uuml;k&uuml;ml&uuml;l&uuml;klerini yerine getirebilmesi i&ccedil;in zorunlu
+                olması,</li>
+            <li>Veri Sahibi&rsquo;nin kendisi tarafından alenileştirilmiş olması,</li>
+            <li>Bir hakkın tesisi, kullanılması veya korunması i&ccedil;in veri işlemenin zorunlu olması,</li>
+            <li>Veri Sahibi&rsquo;nin temel hak ve &ouml;zg&uuml;rl&uuml;klerine zarar vermemek kaydıyla,
+                Şirket&rsquo;in meşru menfaatleri i&ccedil;in veri işlenmesinin zorunlu olması.</li>
+        </ul>
+
+        <p><br />
+            <strong>Verilere Kimler Erişebilmektedir?</strong>
+        </p>
+
+        <p>Şirket, kişisel verileri ve bu kişisel verileri kullanılarak elde ettiği yeni verileri, işbu Gizlilik
+            Politikası ile belirlenen ama&ccedil;ların ger&ccedil;ekleştirilebilmesi i&ccedil;in Şirket&rsquo;in
+            hizmetlerinden faydalandığı &uuml;&ccedil;&uuml;nc&uuml; kişilere, s&ouml;z konusu hizmetlerin temini
+            amacıyla sınırlı olmak &uuml;zere aktarılabilecektir. Şirket ayrıca, işbu Gizlilik Politikası&rsquo;nda
+            belirtilen ama&ccedil;lar dahilinde verileri Şirket iş ortakları ve tedarik&ccedil;ileri ile hukuken
+            yetkili kurum ve kuruluşlara aktarabilecektir.</p>
+
+        <p>Şirket, veri sahibi deneyiminin geliştirilmesi (iyileştirme ve kişiselleştirme d&acirc;hil), veri
+            sahibinin g&uuml;venliğini sağlamak, hileli ya da izinsiz kullanımları tespit etmek, operasyonel
+            değerlendirme araştırılması, Platform hizmetlerine ilişkin hataların giderilmesi ve işbu Gizlilik
+            Politikası&rsquo;nda yer alan ama&ccedil;lardan herhangi birisini ger&ccedil;ekleştirebilmek i&ccedil;in
+            SMS g&ouml;nderimi yapanlar da dahil olmak &uuml;zere dış kaynak hizmet sağlayıcıları, barındırma hizmet
+            sağlayıcıları (<em>hosting&nbsp;</em>servisleri<em>)</em>, hukuk b&uuml;roları, araştırma şirketleri,
+            &ccedil;ağrı merkezleri gibi &uuml;&ccedil;&uuml;nc&uuml; kişiler ile paylaşabilecektir.</p>
+
+        <p>Veri sahibi, yukarıda belirtilen ama&ccedil;larla sınırlı olmak kaydı ile bahsi ge&ccedil;en
+            &uuml;&ccedil;&uuml;nc&uuml; tarafların veri sahibinin kişisel verilerini d&uuml;nyanın her yerindeki
+            sunucularında saklayabileceğini, bu hususa peşinen muvafakat ettiğini kabul eder.</p>
+
+        <p><strong>Verilere Erişim Hakkı ve D&uuml;zeltme Talepleri Hakkında</strong></p>
+
+        <p>Kanun&rsquo;un 11. maddesi uyarınca veri sahipleri,</p>
+
+        <ul>
+            <li>Kişisel veri işlenip işlenmediğini &ouml;ğrenme,</li>
+            <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
+            <li>Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını
+                &ouml;ğrenme,</li>
+            <li>Yurt i&ccedil;inde veya yurt dışında kişisel verilerin aktarıldığı &uuml;&ccedil;&uuml;nc&uuml;
+                kişileri bilme,</li>
+            <li>Kişisel verilerin eksik veya yanlış işlenmiş olması h&acirc;linde bunların d&uuml;zeltilmesini
+                isteme ve bu kapsamda yapılan işlemin kişisel verilerin aktarıldığı &uuml;&ccedil;&uuml;nc&uuml;
+                kişilere bildirilmesini isteme,</li>
+            <li>Kanun ve ilgili diğer kanun h&uuml;k&uuml;mlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini
+                gerektiren sebeplerin ortadan kalkması h&acirc;linde kişisel verilerin silinmesini veya yok
+                edilmesini isteme ve bu kapsamda yapılan işlemin kişisel verilerin aktarıldığı
+                &uuml;&ccedil;&uuml;nc&uuml; kişilere bildirilmesini isteme,</li>
+            <li>İşlenen verilerin m&uuml;nhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin
+                kendisi aleyhine bir sonucun ortaya &ccedil;ıkmasına itiraz etme,</li>
+            <li>Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması h&acirc;linde zararın
+                giderilmesini talep etme haklarına sahiptir.</li>
+        </ul>
+
+        <p>S&ouml;z konusu haklar, kişisel veri sahipleri tarafından&nbsp;<a
+                href="https://www.agrotec.com.tr/tr/www.aboutcookies.org"
+                target="_blank">www.aboutcookies.org&nbsp;</a>&nbsp;e&nbsp;<a
+                href="https://www.agrotec.com.tr/tr/www.allaboutcookies.org"
+                target="_blank">www.allaboutcookies.org</a>&nbsp;adreslerini ziyaret edebilirisiniz.</p>
+
+        <p>İnternet Sitemizde &ccedil;erez kullanılmasının başlıca ama&ccedil;ları aşağıda sıralanmaktadır:</p>
+
+        <ul>
+            <li>İnternet sitesinin işlevselliğini ve performansını arttırmak yoluyla sizlere sunulan hizmetleri
+                geliştirmek,</li>
+            <li>İnternet Sitesini iyileştirmek ve İnternet Sitesi &uuml;zerinden yeni &ouml;zellikler sunmak ve
+                sunulan &ouml;zellikleri sizlerin tercihlerine g&ouml;re kişiselleştirmek;</li>
+            <li>İnternet Sitesinin, sizin ve Şirketimizin hukuki ve ticari g&uuml;venliğinin teminini sağlamak.</li>
+            <li>Doğrudan ve dolaylı pazarlama faaliyetleri kapsamında kullanmak</li>
+            <li>Site&rsquo;de Kullanılan &Ccedil;erezlerin Kategorileri</li>
+        </ul>
+
+        <p>&nbsp;</p>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Teknik &Ccedil;erezler</p>
+                    </td>
+                    <td>
+                        <p>Teknik &ccedil;erezler ile Site&rsquo;nin &ccedil;alışması sağlanmakta, internet
+                            sitesinin &ccedil;alışmayan sayfaları ve alanları tespit edilmektedir.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Otantikasyon &Ccedil;erezleri</p>
+                    </td>
+                    <td>
+                        <p>Ziyaret&ccedil;iler, şifrelerini kullanarak Site&rsquo;ye giriş yapmaları durumunda, bu
+                            t&uuml;r &ccedil;erezler ile, ziyaret&ccedil;inin Site&rsquo;de ziyaret ettiği her bir
+                            sayfada site kullanıcısı olduğu belirlenerek, kullanıcının her sayfada şifresini yeniden
+                            girmesi &ouml;nlenir.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Flash &Ccedil;erezleri</p>
+                    </td>
+                    <td>
+                        <p>Site&rsquo;de yer alan g&ouml;r&uuml;nt&uuml; veya ses i&ccedil;eriklerini etkinleştirmek
+                            i&ccedil;in kullanılan &ccedil;erez t&uuml;rleridir.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kişiselleştirme &Ccedil;erezleri</p>
+                    </td>
+                    <td>
+                        <p>Kullanıcıların tercihlerini farklı internet sitesinin farklı sayfalarını ziyarette de
+                            hatırlamak i&ccedil;in kullanılan &ccedil;erezlerdir. &Ouml;rneğin, se&ccedil;miş
+                            olduğunuz dil tercihinizin hatırlanması.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Analitik &Ccedil;erezler</p>
+                    </td>
+                    <td>
+                        <p>Analitik &ccedil;erezler ile Site&rsquo;yi ziyaret edenlerin sayıları, Site&rsquo;de
+                            g&ouml;r&uuml;nt&uuml;lenen sayfaların tespiti, Site ziyaret saatleri, internet sitesi
+                            sayfaları kaydırma hareketleri gibi analitik sonu&ccedil;ların &uuml;retimini sağlayan
+                            &ccedil;erezlerdir.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <ul>
+            <li><strong>Platform&rsquo;da Kullanılan &Ccedil;erezler</strong></li>
+        </ul>
+
+        <p>&nbsp;</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <p>&Ccedil;erez</p>
+                    </th>
+                    <th>
+                        <p>A&ccedil;ıklama, S&uuml;re ve Tercihler</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Reklam Ama&ccedil;lı</p>
+                    </td>
+                    <td>
+                        <p>Davranışsal ve hedef odaklı reklamların ziyaret&ccedil;ilere g&ouml;sterilmesi amacıyla
+                            kullanılmaktadır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Pazar Analizi</p>
+                    </td>
+                    <td>
+                        <p>Pazar analizi y&uuml;r&uuml;t&uuml;lmesi amacıyla kullanılmaktadır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Facebook</p>
+                    </td>
+                    <td>
+                        <p>Bu t&uuml;r &ccedil;erezler, Facebook &uuml;yelerinin (veya &uuml;ye olmayan kişilerin)
+                            pazar analizi ve &uuml;r&uuml;n gelişimi amacıyla izlenmesini sağlar.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Twitter</p>
+                    </td>
+                    <td>
+                        <p>Bu t&uuml;r &ccedil;erezler, sosyal medya ağlarına &uuml;ye olan veya olmayan kişilerin,
+                            pazar analizi ve &uuml;r&uuml;n gelişimi amacıyla izlenmesi i&ccedil;in kullanılır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Google Analitikleri</p>
+                    </td>
+                    <td>
+                        <p>Bu t&uuml;r &ccedil;erezler t&uuml;m istatistiksel verilerin toplanmasını bu şekilde
+                            Sitenin sunumunun ve kullanımının geliştirilmesini sağlar. Google, bu istatistiklere
+                            toplumsal istatistikler ve ilgilere ilişkin veriler eklemek suretiyle, kullanıcıları
+                            daha iyi anlamamızı sağlar.</p>
+
+                        <p>Sitemiz, Google Analitik &ccedil;erezleri kullanmaktadır. S&ouml;z konusu &ccedil;erezler
+                            ile toplanan veriler, ABD&rsquo;de bulunan Google sunucularına aktarılmakta ve s&ouml;z
+                            konusu veriler Google&rsquo;ın veri koruma ilkeleri ile uyumlu olarak muhafaza
+                            edilmektedir. Google&rsquo;ın analitik veri işleme faaliyetleri ve kişisel verilerin
+                            korunması konusundaki ilkeler hakkında daha fazla bilgi sahibi olmak i&ccedil;in&nbsp;<a
+                                href="https://marketingplatform.google.com/about/"
+                                target="_blank">buraya</a>&nbsp;tıklayabilirsiniz.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Oturum</p>
+                    </td>
+                    <td>
+                        <p>Oturum &ccedil;erezleri oturumun s&uuml;rekliliğinin sağlanması amacıyla kullanılır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Y&uuml;k Dengeleme</p>
+                    </td>
+                    <td>
+                        <p>Y&uuml;k dengeleme &ccedil;erezleri, y&uuml;k&uuml; dağıtarak sunucu
+                            y&uuml;k&uuml;n&uuml; azaltmak i&ccedil;in kullanılır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>G&uuml;venlik</p>
+                    </td>
+                    <td>
+                        <p>G&uuml;venlik &ccedil;erezler, g&uuml;venlik kontrolleri i&ccedil;in kullanılır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Dolandırıcılık Tespiti</p>
+                    </td>
+                    <td>
+                        <p>Tıklama hilelerinin tespit edilmesi i&ccedil;in kullanılmaktadır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Kullanıcı Kimliği</p>
+                    </td>
+                    <td>
+                        <p>Kullanıcı kimliği &ccedil;erezler, kullanıcıların yalnızca kendi bilgilerini
+                            g&ouml;rmeleri i&ccedil;in kullanılır.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Dil</p>
+                    </td>
+                    <td>
+                        <p>Kullanıcının se&ccedil;tiği dili kaydeder ve buna uygun se&ccedil;enekler sunar.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Mobil</p>
+                    </td>
+                    <td>
+                        <p>Eğer kullanıcı Siteyi mobil bir cihazdan ziyaret ediyorsa, ana web sitesini
+                            g&ouml;stermek i&ccedil;in kullanılır. (&Ouml;rneğin, cihazın Flash&#39;ı
+                            etkinleştirildiği), ya da Flash&#39;a ihtiya&ccedil; duymayan bir mobil sitede olduğunu.
+                            Kaynak site kullanıcının tercihlerinin daha iyi anlaşılabilmesi i&ccedil;in kaydedilir.
+                        </p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Flash &ccedil;erezleri</p>
+                    </td>
+                    <td>
+                        <p>Oynatılacak ses ve video i&ccedil;eriklerini etkinleştirir.</p>
+
+                        <p>Tarayıcı ayarları aracığıyla kabul etmek ya da reddetmek m&uuml;mk&uuml;nd&uuml;r.&nbsp;
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <li>
+                <p><strong>&Ccedil;erezlerin Kullanımı Veri Sahipleri Tarafından Engellenebilir mi?</strong></p>
+            </li>
+        </ul>
+
+        <p>Veri sahipleri, tarayıcı ayarlarını değiştirerek &ccedil;erezlere ilişkin tercihlerini kişiselleştirme
+            imkanına sahiptir. Eğer kullanılan tarayıcı bu imk&acirc;nı sunmaktaysa, tarayıcı ayarları
+            &uuml;zerinden &ccedil;erezlere ilişkin tercihleri değiştirmek m&uuml;mk&uuml;nd&uuml;r.
+            B&ouml;ylelikle, tarayıcının sunmuş olduğu imkanlara g&ouml;re farklılık g&ouml;sterebilmekle birlikte,
+            veri sahiplerinin &ccedil;erezlerin kullanılmasını engelleme, &ccedil;erez kullanılmadan &ouml;nce uyarı
+            almayı tercih etme veya sadece bazı &ccedil;erezleri devre dışı bırakma ya da silme imkanları
+            bulunmaktadır.</p>
+
+        <p>&Ccedil;erezlere ilişkin tercihlerin, kullanıcının platforma erişim sağladığı her bir cihaz &ouml;zelinde
+            ayrı ayrı yapılması gerekebilecektir.</p>
+
+        <p>&nbsp;</p>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>&nbsp;Adobe Analytics</p>
+                    </td>
+                    <td>
+                        <p><a href="http://www.adobe.com/uk/privacy/opt-out.html"
+                                target="_blank">http://www.adobe.com/uk/privacy/opt-out.html</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>AOL</p>
+                    </td>
+                    <td>
+                        <p><a href="https://help.aol.com/articles/restore-security-settings-and-enable-cookie-settings-on-browser"
+                                target="_blank">https://help.aol.com/articles/restore-security-settings-and-enable-cookie-settings-on-browser</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Google Adwords</p>
+                    </td>
+                    <td>
+                        <p><a href="https://support.google.com/ads/answer/2662922?hl=en"
+                                target="_blank">https://support.google.com/ads/answer/2662922?hl=en</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Google Analytics</p>
+                    </td>
+                    <td>
+                        <p><a href="https://tools.google.com/dlpage/gaoptout"
+                                target="_blank">https://tools.google.com/dlpage/gaoptout</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Google Chrome</p>
+                    </td>
+                    <td>
+                        <p><a href="http://www.google.com/support/chrome/bin/answer.py?hl=en&amp;answer=95647"
+                                target="_blank">http://www.google.com/support/chrome/bin/answer.py?hl=en&amp;answer=95647</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Internet Explorer</p>
+                    </td>
+                    <td>
+                        <p><a href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies"
+                                target="_blank">https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>MozillaFirefox</p>
+                    </td>
+                    <td>
+                        <p><a href="http://support.mozilla.com/en-US/kb/Cookies"
+                                target="_blank">http://support.mozilla.com/en-US/kb/Cookies</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Opera</p>
+                    </td>
+                    <td>
+                        <p><a href="http://www.opera.com/browser/tutorials/security/privacy/"
+                                target="_blank">http://www.opera.com/browser/tutorials/security/privacy/</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Safari:</p>
+                    </td>
+                    <td>
+                        <p><a href="https://support.apple.com/kb/ph19214?locale=tr_TR"
+                                target="_blank">https://support.apple.com/kb/ph19214?locale=tr_TR</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <ul>
+            <li>
+                <p><strong>Gizlilik Politikası&rsquo;ndaki Değişiklikler</strong></p>
+            </li>
+        </ul>
+
+        <p>Şirket, işbu Gizlilik Politikası h&uuml;k&uuml;mlerini dilediği zaman değiştirebilir. G&uuml;ncel
+            Gizlilik Politikası, Veri Sahibi &rsquo;ne herhangi bir y&ouml;ntemle sunulduğu tarihte
+            y&uuml;r&uuml;rl&uuml;k kazanır.</p>
+
+    </div>
+
+
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <!-- ------------------------------------------------------------------------------------------------ -->
+
+    <div *ngIf="getLanguageCode() === 'en-US'" class="container">
+        <div class="detail-editor text row" data-aos="fade-right">
+            <h1 class="bd-title" style="font-size: 3rem;">Cookie Privacy Policy</h1>
+
+            <p>The purpose of this Privacy Policy is to determine the terms and conditions regarding the use of
+                personal data shared by the Platform users/members/visitors ("Data Owner") with the Company or that
+                the Company produces while the Data Owner uses the Platform during the operation of the website <a
+                    href="https://www.allentplastik.com/" target="_blank">https://www.allentplastik.com/</a> operated by
+                ALLENT Plastik Kalıp Sanayi ve Ticaret Ltd. Şti. (“the Company”).</p>
+
+            <p><strong>Data Owner declares that he/she has been informed about processing the personal data and
+                    he/she consents that the personal data shall be used in a manner stated here, with this Privacy
+                    Policy.</strong></p>
+
+            <p><strong>Which Data Is Processed? </strong></p>
+
+            <p>Under his heading, it is listed which data is processed by the Company and regarded as personal data
+                pursuant to Personal Data Protection Law no 6698. Unless expressly stated, the term
+                <strong>“personal data”</strong> shall cover the following information within the scope of the terms
+                and conditions of this Privacy Policy.
+            </p>
+
+            <ul>
+                <li>Customer Information</li>
+                <li>Device Information</li>
+                <li>Behaviors</li>
+                <li>Demographic Information</li>
+            </ul>
+
+            <p>Under articles 3 and 7 of Personal Data Protection Law, the data anonymized irrevocably shall not be
+                regarded as personal data pursuant to the terms of aforementioned law and processing activities as
+                to this data shall be carried out without being bound by the terms of this Privacy Policy. </p>
+
+            <p><strong>For Which Purpose Is The Data Used? </strong></p>
+
+            <p>The Company may process the <strong>personal data for recommending the goods and services offered by
+                    the Company to the persons by customizing them according to the likes, using habits and needs of
+                    the related persons; for using within the scope of marketing activities directly or indirectly
+                    and for transferring the data to the Company's representatives, solution partners and third
+                    parties that offer services to the Company.</strong></p>
+
+            <p>The Company may process the personal data without further obtaining the consent of the Data Owner and
+                share it with third parties pursuant to articles 5 and 8 of Personal Data Protection Law and/or in
+                case of existence of exceptions in the related legislation. The main situations concerned are stated
+                below: </p>
+
+            <ul>
+                <li>Where it is explicitly stipulated by laws,</li>
+                <li>Where it is obligatory for the life or bodily integrity of the person himself/herself or of
+                    another person who is in a situation disabling him/her to express his/her consent due to factual
+                    impossibility or whose consent is not recognized in legal terms,</li>
+                <li>Where it is required to process the personal data if it is directly related to making or
+                    fulfiling an agreement between the Data Owner and the Company,</li>
+                <li>Where it is obligatory for the Company to fulfil its legal obligations,</li>
+                <li>Where it is publicized by the Data Owner himself/herself,</li>
+                <li>Where it is obligatory to process the data for facilitating, using or protecting a right,</li>
+                <li>Where it is obligatory to process the data for the Company's legitimate interests if it does not
+                    damage the fundamental rights and freedoms of the Data Owner. </li>
+            </ul>
+
+            <p><strong>Who Can Access to The Data? </strong></p>
+
+            <p>The Company may transfer the personal data and the new data acquired by using this personal data to
+                the third parties, services of which the Company uses, for fulfilling the purposes specified by this
+                Privacy Policy, with the condition of being limited with the purpose of ensuring the concerned
+                services. In addition, the Company may transfer the data to the business partners and suppliers and
+                institutions and organizations legally authorized, under the purposes stated in this Privacy Policy.
+            </p>
+
+            <p>The Company may share the personal data with third parties such as outsourced service providers
+                including SMS senders, hosting service providers (hosting services), law offices, research companies
+                and call centers to enhance the experience of te data owner (including improving and customization),
+                ensure the security of the data owner, detect fraudulent or unauthorized use, research operational
+                assesment, fix the errors related to the Platform services and fulfil any purposes set forth in this
+                Privacy Policy. </p>
+
+            <p>Data owner agrees and consents in advance that the concerned third parties may store the personal
+                data of the data owner in their servers across the world, with the condition of being limited with
+                the purposes stated above. </p>
+
+            <p><strong>About the Right to Access Data and Correction Requests</strong></p>
+
+            <p>Pursuant to the article 11 of the Law, the data owners have the right to,</p>
+
+            <ul>
+                <li>Learn whether the personal data has been processed,</li>
+                <li>Request information if his/her personal data has been processed,</li>
+                <li>Learn the purpose of processing the personal data and whether it is used in line with the
+                    purpose,</li>
+                <li>Know the national and international third parties to which the personal data is transferred,
+                </li>
+                <li>Request correction if the personal data has been incompletely or incorrectly processed and
+                    request notifying the transaction conducted accordingly to the third parties to which the
+                    personal data is transferred,</li>
+                <li>Request deletion or destruction of the personal data in the event that the reasons to process
+                    data cease to exist though it was processed in line with the terms of the Law and other laws,
+                    and request notifying the transaction conducted accordingly to the third parties to which the
+                    personal data is transferred,</li>
+                <li>Object to occurrance of a result against himself/herself upon exclusively analyzing the data
+                    processed by automatic systems,</li>
+                <li>Request compensation in case of a loss due to processing of the personal data illegally. </li>
+            </ul>
+
+            <p>Data owners may visit <a href="https://www.aboutcookies.org" target="_blank">www.aboutcookies.org
+                </a> e <a href="https://www.allaboutcookies.org" target="_blank">www.allaboutcookies.org</a> for
+                more details regarding the relevant rights. </p>
+
+            <p>The main purposes of using cookies on our Website are listed below: </p>
+
+            <ul>
+                <li>To improve the services delivered to you by enhancing the functionality and performance of the
+                    Website,</li>
+                <li>To improve the Website, offer new properties on the Website and customize the properties offered
+                    according to your preferences;</li>
+                <li>To ensure the legal and commercial security of the Website, you, and our Company.</li>
+                <li>To use within the scope of marketing activities directly or indirectly</li>
+                <li>Categories of the Cookies Used on the Website</li>
+            </ul>
+
+            <p> </p>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Technical Cookies</td>
+                        <td>Technical cookies enable the operation of the Website and detection of non-operating
+                            pages and fields of the website.</td>
+                    </tr>
+                    <tr>
+                        <td>Authentication Cookies</td>
+                        <td>When the visitors log in to the Website, this type of cookies detect on each page that
+                            the visitor visits on the Website that the visitor is a website user and enables the
+                            user not to reenter the password on each page.</td>
+                    </tr>
+                    <tr>
+                        <td>Flash Cookies</td>
+                        <td>This type of cookies are used to activate the visual or audio content on the Website.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Customization Cookies</td>
+                        <td>These cookies are used to remember the preferences of the users for visits to different
+                            pages of a different website. For example, remembering the language preference you have
+                            selected.</td>
+                    </tr>
+                    <tr>
+                        <td>Analytical Cookies</td>
+                        <td>Analytical cookies produce the analytical results such as the number of visitors to the
+                            Website, detecting the pages viewed on the Website, and movements of scrolling the pages
+                            on the website. </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p> </p>
+
+            <ul>
+                <li><strong>Cookies Used on the Platform</strong></li>
+            </ul>
+
+            <p> </p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>Cookie</p>
+                        </th>
+                        <th>
+                            <p>Description, Time and Preferences</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>For Advertisement Purpose</p>
+                        </td>
+                        <td>
+                            <p>It is used to show the behavioral and target-oriented advertisements to the visitors.
+                            </p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Market Analysis</p>
+                        </td>
+                        <td>
+                            <p>It is used to conduct market analysis.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Facebook</p>
+                        </td>
+                        <td>
+                            <p>This type of cookies enables tracking the Facebook members (or those who are not
+                                members) for market analysis and product improvement purposes.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Twitter</p>
+                        </td>
+                        <td>
+                            <p>This type of cookies enables tracking the persons who are the members of social media
+                                networks or not, for market analysis and product improvement purposes.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Google Analytics</td>
+                        <td>
+                            <p>This type of cookies enables collecting all statistical data to improve presenting
+                                and use of the Website.<br />
+                                Google enables us to understand the users better by adding social statistics and
+                                data regarding interests to these statistics.</p>
+
+                            <p>For more information about the analytical data processing operations and principles
+                                regarding the protection of personal data of Google, you can <a
+                                    href="https://marketingplatform.google.com/about/" target="_blank">click
+                                    here.</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Session</td>
+                        <td>
+                            <p>Session cookies are used to ensure the continuence of the session.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Load Balancing</td>
+                        <td>
+                            <p>Load balancing cookies are used to reduce the load on the server by distributing the
+                                load.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>
+                            <p>Security cookies are used for security controls.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fraud Detection</td>
+                        <td>
+                            <p>It is used to detect click frauds.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>User Identification</td>
+                        <td>
+                            <p>User identification cookies are used only for the users to view their own
+                                information.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Language</td>
+                        <td>
+                            <p>It saves the language selected by the users and offers the options accordingly.</p>
+
+                            <p>It is possible to accept or decline by the browser settings. </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Mobile</p>
+                        </td>
+                        <td>
+                            <p>If the user visits the Website by a mobile device, it is used to show the main
+                                website (For instance, whether the device is on a mobile site on which the Flash is
+                                activated or which does not require Flash). The source website is saved to
+                                understand the preferences of the user better.</p>
+
+                            <p>It is possible to accept or decline by the browser settings.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Flash cookies</td>
+                        <td>
+                            <p>It activates the audio and video content to be played.</p>
+
+                            <p>It is possible to accept or decline by the browser settings. </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul>
+                <li><strong>Can Data Owners Prevent Use of Cookies? </strong></li>
+            </ul>
+
+            <p>Data owners have the option to customize their preferences for cookies by changing the browser
+                settings.<br />
+                If the browser used offers this option, it is possible to change the preferences related to cookies
+                on browser settings.<br />
+                Therefore, whereas it depends on the options offered by the browser, the data owners have the option
+                to prevent use of cookies, prefer getting notification before use of cookies, or disable or delete
+                some of the cookies. </p>
+
+            <p>It may be required to adjust the preferences individually for each device by which the user accesses
+                the Platform. </p>
+
+            <p> </p>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Adobe Analytics</td>
+                        <td><a href="http://www.adobe.com/uk/privacy/opt-out.html"
+                                target="_blank">http://www.adobe.com/uk/privacy/opt-out.html</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>AOL</p>
+                        </td>
+                        <td>
+                            <p><a href="https://help.aol.com/articles/restore-security-settings-and-enable-cookie-settings-on-browser"
+                                    target="_blank">https://help.aol.com/articles/restore-security-settings-and-enable-cookie-settings-on-browser</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Google Adwords</p>
+                        </td>
+                        <td>
+                            <p><a href="https://support.google.com/ads/answer/2662922?hl=en"
+                                    target="_blank">https://support.google.com/ads/answer/2662922?hl=en</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Google Analytics</p>
+                        </td>
+                        <td>
+                            <p><a href="https://tools.google.com/dlpage/gaoptout"
+                                    target="_blank">https://tools.google.com/dlpage/gaoptout</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Google Chrome</p>
+                        </td>
+                        <td>
+                            <p><a href="http://www.google.com/support/chrome/bin/answer.py?hl=en&answer=95647"
+                                    target="_blank">http://www.google.com/support/chrome/bin/answer.py?hl=en&answer=95647</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Internet Explorer</p>
+                        </td>
+                        <td>
+                            <p><a href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies"
+                                    target="_blank">https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>MozillaFirefox</p>
+                        </td>
+                        <td>
+                            <p><a href="http://support.mozilla.com/en-US/kb/Cookies"
+                                    target="_blank">http://support.mozilla.com/en-US/kb/Cookies</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Opera</p>
+                        </td>
+                        <td>
+                            <p><a href="http://www.opera.com/browser/tutorials/security/privacy/"
+                                    target="_blank">http://www.opera.com/browser/tutorials/security/privacy/</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Safari:</p>
+                        </td>
+                        <td>
+                            <p><a href="https://support.apple.com/kb/ph19214?locale=tr_TR"
+                                    target="_blank">https://support.apple.com/kb/ph19214?locale=tr_TR</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p> </p>
+
+            <ul>
+                <li>
+                    <p><strong>Changes in Privacy Policy</strong></p>
+                </li>
+            </ul>
+
+            <p>The Company may change the terms of this Privacy Policy anytime. The Updated Privacy Policy becomes
+                effective on the date on which it is presented by any means to the Data Owner. </p>
+
         </div>
-        <div class="mb-3">
-            Updated 04 February 2021
-        </div>
-        <p class="bd-lead">
-            Biz, Şirket Adı, olarak güvenliğinize önem veriyor ve bu Çerez Politikası ile siz sevgili
-            ziyaretçilerimizi, web sitemizde hangi çerezleri, hangi amaçla kullandığımız ve çerez ayarlarınızı nasıl
-            değiştireceğiniz konularında kısaca bilgilendirmeyi hedefliyoruz.
-
-            Sizlere daha iyi hizmet verebilmek adına, çerezler vasıtasıyla, ne tür kişisel verilerinizin hangi amaçla
-            toplandığı ve nasıl işlendiği konularında, kısaca bilgi sahibi olmak için lütfen bu Çerez Politikasını
-            okuyunuz. Daha fazla bilgi için Gizlilik Politikamıza göz atabilir ya da bizlerle çekinmeden iletişime
-            geçebilirsiniz.
-        </p>
-    </div>
-    <div class="bd-content">
-        <h2 class="">Çerez Nedir?</h2>
-        <p>
-            Çerezler, kullanıcıların web sitelerini daha verimli bir şekilde kullanabilmeleri adına, cihazlarına
-            kaydedilen küçük dosyacıklardır. Çerezler vasıtasıyla kullanıcıların bilgilerinin işleniyor olması
-            sebebiyle, 6698 sayılı Kişisel Verilerin Korunması Kanunu gereğince, kullanıcıların bilgilendirilmeleri ve
-            onaylarının alınması gerekmektedir.
-
-            Bizler de siz sevgili ziyaretçilerimizin, web sitemizden en verimli şekilde yararlanabilmelerini ve siz
-            sevgili ziyaretçilerimizin kullanıcı deneyimlerinin geliştirilebilmesini sağlamak adına, çeşitli çerezler
-            kullanmaktayız.
-        </p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-transparent">
-            <div class="bd-content">
-                <h4 class="">1. Zorunlu Çerezler</h4>
-                <p>
-                    Zorunlu çerezler, web sitesine ilişkin temel işlevleri etkinleştirerek web sitesinin kullanılabilir
-                    hale
-                    gelmesini sağlayan çerezlerdir. Web sitesi bu çerezler olmadan düzgün çalışmaz.
-                </p>
-            </div>
-        </li>
-        <li class="list-group-item bg-transparent">
-            <div class="bd-content">
-                <h4 class="">2. Performans Çerezleri</h4>
-                <p>
-                    Performans çerezleri, ziyaretçilerin web sitesine ilişkin kullanım bilgilerini ve tercihlerini
-                    anonim
-                    olarak
-                    toplayan ve bu sayede web sitesinin performansının geliştirilmesine olanak sağlayan çerezlerdir.
-                </p>
-            </div>
-        </li>
-        <li class="list-group-item bg-transparent">
-            <div class="bd-content">
-                <h4 class="">3. Fonksiyonel Çerezler</h4>
-                <p>
-                    Fonksiyonel çerezler, kullanıcıların web sitesine ilişkin geçmiş kullanımlarından yola çıkılarak
-                    gelecekteki
-                    ziyaretlerinde tanınmalarını ve hatırlanmalarını sağlayan ve bu sayede web sitelerinin kullanıcılara
-                    dil,
-                    bölge vb. gibi kişiselleştirilmiş bir hizmet sunmasına olanak tanıyan çerezlerdir.
-                </p>
-            </div>
-        </li>
-        <li class="list-group-item bg-transparent">
-            <div class="bd-content">
-                <h4 class="">4. Reklam Çerezleri</h4>
-                <p>
-                    Reklam çerezleri, üçüncü taraflara ait çerezlerdir ve web sitelerinde ziyaretçilerin davranışlarını
-                    izlemek
-                    için kullanılırlar. Bu çerezlerin amaçları, ziyaretçilerin ihtiyaçlarına yönelik ilgilerini çekecek
-                    reklamların gösterilmesine yardımcı olmaktır ve sorumluluğu çerez sahibi üçüncü taraflara aittir.
-                </p>
-            </div>
-        </li>
-    </ul>
-    <div class="bd-content">
-        <h2 class="">Çerezler İle İşlenen Kişisel Veriler Nelerdir?</h2>
-        <p>
-            Kimlik (isim, soy isim, doğum tarihi vb.) ve iletişim (adres, e-posta adresi, telefon, IP, konum vb.)
-            bilgileriniz tarafımızca, çerezler (cookies) vasıtasıyla, otomatik veya otomatik olmayan yöntemlerle ve
-            bazen de analitik sağlayıcılar, reklam ağları, arama bilgi sağlayıcıları, teknoloji sağlayıcıları gibi
-            üçüncü taraflardan elde edilerek, kaydedilerek, depolanarak ve güncellenerek, aramızdaki hizmet ve sözleşme
-            ilişkisi çerçevesinde ve süresince, meşru menfaat işleme şartına dayanılarak işlenecektir.
-        </p>
-    </div>
-    <div class="bd-content">
-        <h2 class="">Çerezler Hangi Amaçla Kullanılmaktadır?</h2>
-        <p>
-            Web sitemizde, şüpheli eylemlerin tespiti yoluyla güvenliğin sağlanması, kullanıcıların tercihleri
-            doğrultusunda işlevsellik ve performansın artırılması, ürünlerin ve hizmetlerin geliştirilmesi ve
-            kişiselleştirilmesi ile bu hizmetlere ulaşımın kolaylaştırılması, sözleşmesel ve hukuki sorumlulukların
-            yerine getirilmesi amaçlı çerezler kullanmaktadır. Ayrıca kullanıcıların daha geniş kapsamlı hizmet
-            sağlayıcılar ile buluşturulabilmesi amacıyla reklam çerezleri ve üçüncü taraflarla bilgi paylaşımı da söz
-            konusudur.
-        </p>
-    </div>
-    <div class="bd-content">
-        <h2 class="">Çerezler Nasıl Yönetilmektedir?</h2>
-        <p>
-            Tüm bu açıklamalardan sonra, hangi çerezlerin kullanılacağı konusu, tamamen kullanıcılarımızın özgür
-            iradelerine bırakılmıştır. Çerez tercihlerinizi, tarayıcınızın ayarlarından silerek ya da engelleyerek, web
-            sitemize adım attığınız anda yönetebilir ya da gelecekte, istediğiniz zaman bu ayarları değiştirebilirsiniz.
-            Daha ayrıntılı bilgi için Gizlilik Politikamıza göz atabilir ya da bizlerle email@site.com e-mail adresi
-            üzerinden iletişime geçebilirsiniz.
-        </p>
-    </div>
-    <div class="bd-content text-center">
-
-        <p>
-            Bu çerez politikası, https://sartlar.com aracılığıyla oluşturulmuştur.
-        </p>
     </div>
 </div>
-
-<!--  -->

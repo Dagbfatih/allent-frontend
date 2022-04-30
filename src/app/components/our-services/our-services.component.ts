@@ -1,3 +1,4 @@
+import { ApiTranslateService } from './../../services/api-translate.service';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 
@@ -9,7 +10,8 @@ import { allTranslates } from 'src/app/services/translation.service';
 export class OurServicesComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   getTranslate(key: string) {
     return allTranslates.get(key);

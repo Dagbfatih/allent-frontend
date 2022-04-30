@@ -20,7 +20,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item d-none d-lg-block">
+                <!-- <li class="nav-item d-none d-lg-block">
                     <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
                         <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
                     </a>
@@ -31,7 +31,7 @@
                         rel="noopener">
                         <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- SM LİST -->
                 <li class="nav-item d-lg-none">
@@ -46,7 +46,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item d-lg-none">
+                <!-- <li class="nav-item d-lg-none">
                     <a class="nav-link" href="#" target="_blank" rel="noopener">
                         <i class="fa fa-facebook fa-sm" aria-hidden="true"></i>
                     </a>
@@ -57,7 +57,7 @@
                         rel="noopener">
                         <i class="fa fa-linkedin fa-sm" aria-hidden="true"></i>
                     </a>
-                </li>
+                </li> -->
 
             </ul>
             <div>
@@ -68,7 +68,7 @@
                         </div>
                         <div class="right">
                             <a href="tel:+90 542 519 09 40" class="text-white sm">
-                                +90 542 519 09 40
+                                {{getTranslate('gsmFromDb')}}
                             </a>
                         </div>
                     </li>
@@ -85,8 +85,16 @@
 
         <!-- NAVBAR BRAND -->
         <a class="navbar-brand d-flex align-items-center" routerLink="/">
-            <img src="assets/logo/allent_logo.png" height="60" class="d-inline-block align-text-top d-none d-lg-block">
-            <img src="assets/logo/allent_logo.png" height="50" class="d-inline-block align-text-top d-lg-none">
+            <!-- lg -->
+            <img *ngIf="getCurrentLanguageCode() === 'tr-TR'" src="assets/logo/allent-logo.png" height="60"
+                class="d-inline-block align-text-top d-none d-lg-block">
+            <img *ngIf="getCurrentLanguageCode() === 'en-US'" src="assets/logo/allent-logo-en.png" height="60"
+                class="d-inline-block align-text-top d-none d-lg-block">
+
+            <!-- sm -->
+            <img *ngIf="getCurrentLanguageCode() === 'tr-TR'" src="assets/logo/allent-logo.png" height="50" class="d-inline-block align-text-top d-lg-none">
+            <img *ngIf="getCurrentLanguageCode() === 'en-US'" src="assets/logo/allent-logo-en.png" height="50" class="d-inline-block align-text-top d-lg-none">
+            
             <!-- <h4 class="d-lg-none ms-2 font-arial"><strong>A L L E N T</strong> Plastik & Kalıp</h4> -->
         </a>
 
@@ -111,13 +119,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Hizmetlerimiz
+                        {{getTranslate('ourServices')}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
                             <a class="dropdown-item" style="white-space: normal;"
                                 (click)="navigate('/our-services/','plastic-injection-molding')">
-                                Plastik Enjeksiyon Kalıpçılığı
+                                {{getTranslate('moldManufacturing')}}
                             </a>
                         </li>
                         <li>
@@ -126,7 +134,7 @@
                         <li>
                             <a class="dropdown-item" style="white-space: normal;"
                                 (click)="navigate('/our-services/','industrial-product-development')">
-                                Endüstriyel Ürün Geliştirme
+                                {{getTranslate('productDesign')}}
                             </a>
                         </li>
                         <li>
@@ -135,7 +143,7 @@
                         <li>
                             <a class="dropdown-item" style="white-space: normal;"
                                 (click)="navigate('/our-services/','manufacture-of-plastic-products')">
-                                Plastik Ürün Üretimi
+                                {{getTranslate('injectionProduction')}}
                             </a>
                         </li>
                     </ul>
@@ -178,20 +186,18 @@
                     </a>
                 </li>
 
-                <li class="nav-item col-12 col-lg-auto">
-                    <!-- LG -->
+                <!-- <li class="nav-item col-12 col-lg-auto">
                     <a class="nav-link p-2 d-none d-lg-block" href="#" target="_blank" rel="noopener">
                         <i class="fa fa-facebook" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
                 </li>
 
                 <li class="nav-item col-12 col-lg-auto">
-                    <!-- LG -->
                     <a class="nav-link p-2 d-none d-lg-block" href="https://www.linkedin.com/company/allent-plastik/"
                         target="_blank" rel="noopener">
                         <i class="fa fa-linkedin" style="font-size: 24px;" aria-hidden="true"></i>
                     </a>
-                </li>
+                </li> -->
 
 
                 <!-- LG -->
@@ -206,7 +212,7 @@
                                     <h3 class="d-flex justify-content-center lg">
                                         <i class="fa fa-phone lg" style="font-size: 20px; margin-left: 0px;"></i>
                                     </h3>
-                                    <p class="text-dark lg">+90 542 519 09 40</p>
+                                    <p class="text-dark lg">{{getTranslate('gsmFromDb')}}</p>
                                 </div>
                             </li>
                         </ul>
@@ -258,24 +264,32 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Hizmetlerimiz
+                            {{getTranslate('ourServices')}}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
-                                    (click)="navigate('/our-services','plastic-injection-molding')">Plastik
-                                    Enjeksiyon Kalıpçılığı</a></li>
+                                    (click)="navigate('/our-services','plastic-injection-molding')">
+                                    {{getTranslate('moldManufacturing')}}
+                                </a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
-                                    (click)="navigate('/our-services/','industrial-product-development')">Endüstriyel
-                                    Ürün Geliştirme</a></li>
+                            <li>
+                                <a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
+                                    (click)="navigate('/our-services/','industrial-product-development')">
+                                    {{getTranslate('productDesign')}}
+                                </a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
-                                    (click)="navigate('/our-services/','manufacture-of-plastic-products')">Plastik Ürün
-                                    Üretimi</a></li>
+                            <li>
+                                <a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
+                                    (click)="navigate('/our-services/','manufacture-of-plastic-products')">
+                                    {{getTranslate('injectionProduction')}}
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item col-md-auto">
@@ -320,8 +334,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item col-12 col-lg-auto">
-                        <!-- SM -->
+                    <!-- <li class="nav-item col-12 col-lg-auto">
                         <a class="nav-link d-lg-none" data-bs-dismiss="offcanvas" href="#" target="_blank"
                             rel="noopener">
                             <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
@@ -330,13 +343,12 @@
                     </li>
 
                     <li class="nav-item col-12 col-lg-auto">
-                        <!-- MD - SM -->
                         <a class="nav-link d-lg-none" data-bs-dismiss="offcanvas"
                             href="https://www.linkedin.com/company/allent-plastik/" target="_blank" rel="noopener">
                             <i class="fa fa-linkedin" style="font-size: 21px; min-width: 18px;" aria-hidden="true"></i>
                             <small class="ms-2 text-secondary">Linkedin</small>
                         </a>
-                    </li>
+                    </li> -->
 
                     <!-- SM -->
                     <li class="nav-item col-12 col-lg-auto d-lg-none mb-3">
@@ -347,7 +359,7 @@
                                         <i class="fa fa-phone sm" style="font-size: 20px; margin-left: 0px;"></i>
                                     </div>
                                     <div class="right">
-                                        <p class="text-dark sm">+90 542 519 09 40</p>
+                                        <p class="text-dark sm">{{getTranslate('gsmFromDb')}}</p>
                                     </div>
                                 </li>
                             </ul>

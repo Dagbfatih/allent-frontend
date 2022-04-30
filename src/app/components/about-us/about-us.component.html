@@ -2,11 +2,12 @@
     <div class="container py-5">
         <div class="row h-100 align-items-center py-5">
             <div class="col-lg-6">
-                <h1 class="display-4">{{getTranslate('aboutUs')}}</h1>
+                <h1 class="display-4" id="about-us">{{getTranslate('aboutUs')}}</h1>
                 <p class="lead text-muted" style="margin-bottom: 5rem;">
                     {{getTranslate('aboutUsPFromDb')}}
                 </p>
-                <h1 class="display-6" style="font-size: 2rem;">{{getTranslate('aboutUsVisionAndMissionLead')}}</h1>
+                <h1 class="display-6" id="vision-and-mission" style="font-size: 2rem;">
+                    {{getTranslate('aboutUsVisionAndMissionLead')}}</h1>
                 <p class="lead text-muted mb-0">
                     {{getTranslate('aboutUsVisionAndMissionP1')}}
                     {{getTranslate('aboutUsVisionAndMissionP2')}}
@@ -15,6 +16,9 @@
             <div class="col-lg-6 d-none d-lg-block">
                 <img src="https://www.allentplastik.com/assets/images/dis_cephe.jpeg" alt="" class="img-fluid">
             </div>
+            <!-- <div class="col-lg-6 d-none d-lg-block">
+                <img src="https://www.allentplastik.com/assets/images/dis_cephe.jpeg" alt="" class="img-fluid">
+            </div> -->
         </div>
     </div>
 </div>
@@ -54,29 +58,30 @@
                     class="img-fluid mb-4 mb-lg-0">
             </div>
         </div> -->
-        <h2 class="display-4 font-weight-light" id="machine-parkour">Makine Parkurumuz</h2>
+        <h2 class="display-4 font-weight-light mb-4" id="machine-parkour">
+            {{getTranslate('ourMachineParkour')}}
+        </h2>
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
                 <div class="card text-white bg-dark h-100">
-                    <img src="assets/images/wele-vq650-cnc.jpg" class="card-img-top img img-fluid w-100 h-100"
+                    <img src="assets/images/wele-vq650-cnc.jpg" width="500" height="500" class="card-img-top img-fluid"
                         alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">WELE VQ650 CNC Dik İşleme Merkezi</h5>
-                        <p class="card-text" style="overflow-wrap: break-word; white-space: pre-wrap;">
-                            X = 1100 mm, Y = 650 mm, Z = 610 mm
-                            İş mili devri = 10.000 d/dk
+                        <h5 class="card-title">{{getTranslate('weleCncName')}}</h5>
+                        <p class="card-text text-muted" style="overflow-wrap: break-word; white-space: pre-wrap;">
+                            {{getTranslate('weleCncProps')}}
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card text-white bg-dark h-100">
-                    <img src="assets/images/focus-seiki-vmc650-cnc.png" class="card-img-top img w-100 h-100" alt="...">
+                    <img src="assets/images/focus-seiki-vmc650-cnc.png" width="500" height="500"
+                        class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Focus Seiki</h5>
-                        <p class="card-text" style="overflow-wrap: break-word; white-space: pre-wrap;">
-                            X = 600 mm, Y = 500 mm, Z = 500 mm
-                            İş mili devri = 12.000 d/dk
+                        <h5 class="card-title">{{getTranslate('focusSeikiCncName')}}</h5>
+                        <p class="card-text text-muted" style="overflow-wrap: break-word; white-space: pre-wrap;">
+                            {{getTranslate('focusSeikiCncProps')}}
                         </p>
                     </div>
                 </div>
@@ -90,54 +95,88 @@
     <div class="container py-5">
 
         <!-- Accout Info Accordion -->
-        <div class="accordion accordion-flush">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne" id="account-info">
-                    <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        <h2 class="display-4 font-weight-light" id="our-founder">Hesap Bilgilerimiz</h2>
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse text-white bg-dark"
-                    aria-labelledby="flush-headingOne" data-bs-parent="#account-info">
-                    <div class="accordion-body">
-                        <app-account-info></app-account-info>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="row mb-4">
+        <div class="row mb-4">
             <div class="col-lg-5">
-                <h2 class="display-4 font-weight-light" id="our-founder">Hesap Bilgilerimiz</h2>
+                <h2 class="display-4 font-weight-light" id="account-info">{{getTranslate('accountInfo')}}</h2>
             </div>
         </div>
-        <app-account-info></app-account-info> -->
+        <div class="table-responsive text-nowrap">
+            <table class="table table-dark table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">{{getTranslate('accountOwner')}}</th>
+                        <th scope="col">{{getTranslate('bankName')}}</th>
+                        <th scope="col">{{getTranslate('branch')}}</th>
+                        <th scope="col">{{getTranslate('foreignCurrency')}}</th>
+                        <th scope="col">{{getTranslate('accountNumber')}}</th>
+                        <th scope="col">{{getTranslate('iban')}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="6" class="align-middle">Allent Plastik Kalıp <br> San. ve Tic. Ltd. Şti.</td>
+                        <td rowspan="3" class="align-middle">Kuveyt Türk</td>
+                        <td rowspan="3" class="align-middle">Büsan</td>
+                        <td>TL</td>
+                        <td>96299056-1</td>
+                        <td>TR960020500009629905600001</td>
+                    </tr>
+                    <tr>
+                        <td>USD</td>
+                        <td>96299056-101</td>
+                        <td>TR150020500009629905600101</td>
+                    </tr>
+                    <tr>
+                        <td>EURO</td>
+                        <td>96299056-103</td>
+                        <td>TR580020500009629905600103</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="align-middle">Yapı Kredi</td>
+                        <td>Büsan (1067)</td>
+                        <td>TL</td>
+                        <td>67117637</td>
+                        <td>TR410006701000000067117637</td>
+                    </tr>
+                    <tr>
+                        <td>Midyat (1036)</td>
+                        <td>TL</td>
+                        <td>67365678</td>
+                        <td>TR080006701000000067365678</td>
+                    </tr>
+                    <tr>
+                        <td>VakıfBank</td>
+                        <td>Büsan</td>
+                        <td>TL</td>
+                        <td>---</td>
+                        <td>TR920001500158007309574130</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
 <div class="bg-custom py-5">
     <div class="container py-5">
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
-                <h2 class="font-weight-light" id="corporate-info">Kurumsal Bilgiler</h2>
+        <div class="row align-items-center mb-4">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <!-- <h2 class="font-weight-light" id="corporate-info">Fatura Bilgilerimiz</h2> -->
+                <h2 class="display-4 font-weight-light mb-5" id="account-info">
+                    {{getTranslate('ourBillingInformation')}}
+                </h2>
                 <p class="font-italic text-muted" style="overflow-wrap: break-word; white-space: pre-wrap;">
-                    Makine Müh. Bülent DAĞ
+                    ALLENT Plastik Kalıp Sanayi ve Ticaret Ltd. Şti.
+                    <br><br>
+                    {{getTranslate(('address'))}}: {{getTranslate('addressFromDb')}}
                     <br>
-                    1978 yılında Şanlıurfa -Ceylanpınar’da doğdu. İlk ve orta öğrenimini Ceylanpınar’da, lise öğrenimini
-                    Şanlıurfa’da tamamladı. Teknik konulara, teknolojiye, yeniliklere ve gelişmeye olan ilgisinden
-                    dolayı Makine Mühendisi olmayı isterdi. Bunu Karadeniz Teknik Üniversitesi, Mühendislik-Mimarlık
-                    Fakültesi, Makine Mühendisliği’ni 1999 yılında tamamlayarak elde etmeyi başardı.
-                    <br>
-
-                    Mühendislik eğitimi sırasında ülkemizin en büyük gözde kuruluşlarından biri olan TÜPRAŞ’ta stajyer
-                    öğrenci olarak çalıştı.
-                    <br>
+                    Selçuk {{getTranslate('taxAdministration')}} - 0551522747
                 </p>
+                <!-- <a routerLink="/corporate-info" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a> -->
             </div>
-            <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="assets/images/img-1.jpg" alt=""
+            <!-- <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="assets/images/img-1.jpg" alt=""
                     class="img-fluid mb-4 mb-lg-0">
-            </div>
+            </div> -->
         </div>
         <!-- <div class="row align-items-center mb-5" id="services">
             <div class="col-lg-5 px-5"><img src="assets/images/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0">
@@ -191,7 +230,7 @@
                     <div class="bg-custom rounded shadow-sm py-5 px-4 col-lg-3 col-sm-12">
                         <img src="assets/images/co-founder-1.jpg" alt="" width="100"
                             class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">Bülent Dağ</h5>
+                        <h5 class="mb-0">{{getTranslate('mechEng')}} Bülent Dağ</h5>
                         <span class="small text-uppercase text-muted">{{getTranslate('founder')}}</span>
                         <ul class="social list-inline mt-3 mb-4">
                             <li class="list-inline-item">
@@ -215,76 +254,13 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <a class="unlink" href="mailto:{{getTranslate('email1FromDb')}}">
-                                    <i class="fa fa-envelope me-1"></i>
-                                    {{getTranslate('email1FromDb')}}
-                                </a>
-                            </li>
-                            <li class="mb-3">
-                                <a class="unlink" href="tel:+90 542 519 09 40">
-                                    <i class="fa fa-phone"></i>
-                                    +90 542 519 09 40
-                                </a>
-                            </li>
-                            <li class="mb-3">
-                                <a class="unlink">
-                                    <i class="fa fa-map-marker me-3"></i>
-                                    {{getTranslate('addressFromDb')}}
-                                </a>
-                            </li>
-                        </ul>
-                        <hr class="d-lg-none">
                     </div>
 
-                    <div class="bg-custom rounded shadow-sm py-5 px-4 col-lg-9 col-sm-12">
-                        <p class="lead text-start">Makine Müh. Bülent DAĞ</p>
-                        <p class="font-italic text-muted text-start"
-                            style="overflow-wrap: break-word; white-space: pre-wrap; text-indent: 24px;">                            
-                            1978 yılında Şanlıurfa -Ceylanpınar’da doğdu. İlk ve orta öğrenimini Ceylanpınar’da, lise
-                            öğrenimini Şanlıurfa’da tamamladı. Teknik konulara, teknolojiye, yeniliklere ve gelişmeye
-                            olan ilgisinden dolayı Makine Mühendisi olmayı isterdi. Bunu Karadeniz Teknik Üniversitesi,
-                            Mühendislik-Mimarlık Fakültesi, Makine Mühendisliği’ni 1999 yılında tamamlayarak elde etmeyi
-                            başardı.
-                            <br>
-                            Mühendislik eğitimi sırasında ülkemizin en büyük gözde kuruluşlarından biri olan TÜPRAŞ’ta
-                            stajyer öğrenci olarak çalıştı.
-                            <br>
-                            2000-2001 yılları arasında, askerlik hizmetini yaptığı Afyon’da faaliyet gösteren 500.
-                            İstihkam Fabrikası’nda Kompozit Kurşun Geçirmez Miğfer üretim faaliyetlerini deneyimleme
-                            imkânı buldu.
-                            <br>
-                            Profesyonel kariyerindeki ilk iş deneyimine, sektöründe ülkemizin lider kuruluşu olan
-                            Şekeroğlu Plastik Ambalaj firmasında 2002 yılında başladı. Plastik enjeksiyon kalıpçılığı
-                            ile ilk tanışması burada gerçekleşti. Kalıpçılıkta işleme hassasiyetlerinin en üst
-                            seviyelerde olduğu ince cidarlı rijit plastik ambalajların enjeksiyon kalıplarının
-                            tasarımını ve üretimini, bu işletmede 2,5 yıl kadar çalışarak tecrübe etme imkânı buldu.
-                            <br>
-                            Ambalaj kalıpçılığında kazandığı deneyimi, 2004 yılında 2 arkadaşıyla birlikte kurduğu Mizan
-                            Kalıp Sanayi Tic. Ltd. Şti. ile ticari faaliyete dönüştürdü. Şirket, 5 yıllık kısa bir zaman
-                            diliminde Türkiye’nin neredeyse tüm ambalaj üreticileri ile oldukça başarılı çalışmalar
-                            yürüttü ve uzun bir referans listesine sahip olmayı başardı.
-                            <br>
-                            2009 yılında, sektöründe ülkemizin lider kuruluşu olan AYTOK Filtre Sistemleri Ltd. Şti.
-                            bünyesinde uzunca bir süre çalıştı. Filtre üretiminde kullanılması gereken kalıpların
-                            işletme bünyesinde üretilebilmesi amacıyla Kalıphane birimini kurdu ve sürekli bu birimin
-                            başında çalışmalarını yürüttü. Filtrelerde ve çeşitli sulama ürünlerinde bilgisayar destekli
-                            mukavemet analizleri ve bilgisayar destekli akış analizleri yardımıyla birçok ürün
-                            revizyonları ve yeni ürün geliştirme projeleri yaptı.
-                            <br>
-                            Bir süre UTAŞ Savunma San. Tic. A.Ş. firmasında yivsiz av tüfeklerinin ve askeri amaçlı
-                            yivli tüfeklerin ürün tasarım ve ürün geliştirme projelerini yürüttü.
-                            <br>
-                            Çeşitli kuruluşlarla çok sayıda yivsiz av tüfeği ürün geliştirme çalışmaları yürüttü.
-                            <br>
-                            2019 yılında, Allent Plastik Kalıp San. Ve Tic. Ltd. Şti. adında kendi işletmesini kurdu.
-                            Böylece Plastik Enjeksiyon Kalıpçılığı, Ürün Geliştirme ve Ürün Prototipleme konularında
-                            sahip olduğu deneyimi ticari olarak gerçekleştirme imkânı buldu.
-                            <br>
-                            Mesleğine sanatçı edasıyla bağlı olan Bülent DAĞ, 2003 yılından bu yana mutlulukla
-                            sürdürdüğü evliliğinde sahip olduğu ve geleceğe umutla bakan 2 çocuğuyla birlikte ülkesine
-                            daha fazla değer katmak için çalışmalarına devam ediyor.
+                    <div class="bg-custom rounded shadow-sm pb-5 px-4 col-lg-9 col-sm-12">
+                        <!-- <p class="lead text-start">Makine Müh. Bülent DAĞ</p> -->
+                        <p class="font-italic text-muted text-start pt-5"
+                            style="overflow-wrap: break-word; white-space: pre-wrap;">
+                            {{getTranslate('ourFounderLife')}}
                         </p>
                     </div>
                 </div>

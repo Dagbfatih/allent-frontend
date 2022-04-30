@@ -1,3 +1,4 @@
+import { NavigationService } from 'src/app/services/navigation.service';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +18,9 @@ import { RouterModule } from '@angular/router';
 import { AccountInfoComponent } from './components/account-info/account-info.component';
 import { CorporateInfoComponent } from './components/corporate-info/corporate-info.component';
 import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
+import { MachineParkourComponent } from './components/machine-parkour/machine-parkour.component';
+import { DownloadableContentComponent } from './components/downloadable-content/downloadable-content.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,12 +36,11 @@ import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.
     AccountInfoComponent,
     CorporateInfoComponent,
     CookiePolicyComponent,
+    MachineParkourComponent,
+    DownloadableContentComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-  ],
-  providers: [RandomSlideGeneratorService],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [RandomSlideGeneratorService, NavigationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

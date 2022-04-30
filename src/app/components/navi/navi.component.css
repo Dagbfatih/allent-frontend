@@ -73,10 +73,6 @@ ul.friend-list {
   font-size: 21px;
 }
 
-/* ul.navbar-nav > li > a{
-    color: rgb(4, 37, 74);
-} */
-
 /* LG */
 
 ul.friend-list li.lg {
@@ -139,6 +135,7 @@ ul.friend-list .right h3.sm {
 ul.friend-list .right p.sm {
   font-size: 14px;
   color: black;
+  margin-bottom: 5px;
 }
 
 ul.friend-list .right a.sm {

@@ -8,9 +8,9 @@
                         <!-- text-muted -->
                         <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
                             aria-label="Allent Plastik">
-                            <img src="assets/logo/allent_logo_without_text.png" height="32"
+                            <img src="assets/logo/allent-logo-lg.png" height="32"
                                 class="d-inline-block align-text-top me-2">
-                            <h3 class="text-custom">Allent Plastik</h3>
+                            <h3 class="text-custom">{{getTranslate('footerBrand')}}</h3>
                             <!-- San. ve Tic. Ltd. Şti. -->
                         </a>
                         <li class="mb-2 text-muted">
@@ -42,7 +42,7 @@
                                 İnstagram
                             </a>
                         </li>
-                        <li class="mb-2">
+                        <!-- <li class="mb-2">
                             <a class="link-dark link" href="#">
                                 <i class="fa fa-facebook" style="font-size: 21px; min-width: 18px;"
                                     aria-hidden="true"></i>
@@ -55,7 +55,7 @@
                                     aria-hidden="true"></i>
                                 Linkedin
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
@@ -64,23 +64,28 @@
                     <h3>{{getTranslate("menu")}}</h3>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a class="link-dark link" (click)="navigate('/about-us', 'machine-parkour')">
-                                Makine Parkuru
+                            <a class="link-dark link" routerLink="/machine-parkour">
+                                {{getTranslate('machineParkour')}}
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a class="link-dark link" (click)="navigate('/about-us', 'account-info')">
-                                Banka Hesap Bilgileri
+                            <a class="link-dark link" routerLink="/account-info">
+                                {{getTranslate('accountInfo')}}
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a class="link-dark link" (click)="navigate('/about-us', 'corporate-info')">
-                                Kurumsal Bilgiler
+                            <a class="link-dark link" routerLink="/corporate-info">
+                                {{getTranslate('invoiceInformation')}}
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a class="link-dark link" (click)="navigate('/cookie-policy', 'cookie-policy')">
-                                Çerez Politikası
+                            <a class="link-dark link" routerLink="/downloadable-content">
+                                {{getTranslate('downloadableContent')}}
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="link-dark link" routerLink="/cookie-policy">
+                                {{getTranslate('cookiePolicy')}}
                             </a>
                         </li>
                     </ul>
@@ -104,16 +109,14 @@
                         </li>
                         <li class="mb-2">
                             <a class="link-dark unlink" href="tel:{{getTranslate('gsmFromDb')}}">
-                                <i class="fa fa-envelope me-1"></i>
+                                <i class="fa fa-phone me-1"></i>
                                 {{getTranslate('gsmFromDb')}}
-                                <span class="badge bg-light text-dark">{{getTranslate('personal')}}</span>
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a class="link-dark unlink" href="tel:{{getTranslate('phoneNumberFromDb')}}">
-                                <i class="fa fa-envelope me-1"></i>
+                            <a class="link-dark unlink">
+                                <i class="fa fa-phone me-1"></i>
                                 {{getTranslate('phoneNumberFromDb')}}
-                                <span class="badge bg-light text-dark">{{getTranslate('company')}}</span>
                             </a>
                         </li>
                     </ul>
@@ -141,7 +144,7 @@
                     <div class="col-md-4 col-sm-12 text-start col-xs-6">
                         <p class="font-italic text-muted">
                             Designed by
-                            <a class="link-dark unlink" href="mailto:dagbfatih@hotmail.com">&copy;Dagbfatih</a>
+                            <a class="link-dark unlink" href="mailto:dagbfatih@hotmail.com">&#x40;Dagbfatih</a>
                         </p>
                     </div>
                 </div>

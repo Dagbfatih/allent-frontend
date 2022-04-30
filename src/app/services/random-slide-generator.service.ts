@@ -13,10 +13,7 @@ export class RandomSlideGeneratorService {
   public randomSlidesForSm: Slide[] = [];
   slides: Slide[] = [];
 
-  constructor(
-    private moldService: MoldService,
-    private slideService: SlideService
-  ) {
+  constructor(private slideService: SlideService) {
     this.getAllMoldImages();
     this.getRandomSlidesForLg(3);
     this.getRandomSlideForSm(3);
@@ -33,10 +30,7 @@ export class RandomSlideGeneratorService {
     const firstElement = this.slides.find((s) => s.id === 1)!;
 
     if (this.randomSlidesForLg.includes(firstElement)) {
-      const index = this.randomSlidesForLg.indexOf(firstElement, 0);
-      if (index > -1) {
-        this.randomSlidesForLg.splice(index, 1);
-      }
+      return;
     }
 
     this.randomSlidesForLg.splice(0, 0, firstElement);
@@ -49,10 +43,7 @@ export class RandomSlideGeneratorService {
     const firstElement = this.slides.find((s) => s.id === 23)!;
 
     if (this.randomSlidesForSm.includes(firstElement)) {
-      const index = this.randomSlidesForSm.indexOf(firstElement, 0);
-      if (index > -1) {
-        this.randomSlidesForSm.splice(index, 1);
-      }
+      return;
     }
 
     this.randomSlidesForSm.splice(0, 0, firstElement);

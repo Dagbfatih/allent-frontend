@@ -63,6 +63,10 @@ export class NaviComponent implements OnInit {
     return this.settingsService.getCurrentLanguage()!;
   }
 
+  getCurrentLanguageCode() {
+    return this.settingsService.getLanguageCodeFromLocalStorage();
+  }
+
   getLanguages() {
     this.languages = this.languageService.getAll().data;
   }
