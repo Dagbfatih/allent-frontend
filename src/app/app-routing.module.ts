@@ -17,6 +17,7 @@ export const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled',
   scrollPositionRestoration: 'enabled',
   scrollOffset: [0, 135],
+  useHash: true,
 };
 
 export const routes: Routes = [

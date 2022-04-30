@@ -21,6 +21,7 @@ import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.
 import { MachineParkourComponent } from './components/machine-parkour/machine-parkour.component';
 import { DownloadableContentComponent } from './components/downloadable-content/downloadable-content.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,11 @@ import { HttpClientModule } from '@angular/common/http';
     DownloadableContentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [RandomSlideGeneratorService, NavigationService],
+  providers: [
+    RandomSlideGeneratorService,
+    NavigationService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
