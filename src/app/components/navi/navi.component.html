@@ -67,7 +67,7 @@
                             <i class="fa fa-phone sm text-white fa-sm"></i>
                         </div>
                         <div class="right">
-                            <a href="tel:+90 542 519 09 40" class="text-white sm">
+                            <a href="tel:{{getTranslate('gsmFromDb')}}" class="text-white sm">
                                 {{getTranslate('gsmFromDb')}}
                             </a>
                         </div>
@@ -352,7 +352,7 @@
 
                     <!-- SM -->
                     <li class="nav-item col-12 col-lg-auto d-lg-none mb-3">
-                        <a class="nav-link" aria-current="page" routerLink="/contact">
+                        <a class="nav-link" aria-current="page" href="tel:{{getTranslate('gsmFromDb')}}">
                             <ul class="friend-list sm">
                                 <li class="sm">
                                     <div class="left" style="margin-right: 0px;">
