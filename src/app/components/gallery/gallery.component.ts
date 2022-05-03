@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 import { Mold } from 'src/app/models/entities/mold';
 import { MoldService } from 'src/app/services/mold.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-gallery',
@@ -14,6 +15,7 @@ export class GalleryComponent implements OnInit {
 
   constructor(
     private moldService: MoldService,
+    private modalService: NgbModal
   ) {}
 
   ngOnInit(): void {
@@ -21,8 +23,8 @@ export class GalleryComponent implements OnInit {
   }
 
   open(path: string, content: any) {
-    // this.currentPhotoPath = path;
-    // this.modalService.open(content, { centered: true, size: 'xl' });
+    this.currentPhotoPath = path;
+    this.modalService.open(content, { centered: true, size: 'xl' });
   }
 
   getAllMolds() {
