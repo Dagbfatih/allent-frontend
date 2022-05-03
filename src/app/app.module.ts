@@ -1,4 +1,3 @@
-import { LightboxModule } from 'ng-gallery/lightbox';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
@@ -21,8 +20,7 @@ import { MachineParkourComponent } from './components/machine-parkour/machine-pa
 import { DownloadableContentComponent } from './components/downloadable-content/downloadable-content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { GalleryModule } from 'ng-gallery';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -45,9 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GalleryModule,
-    BrowserAnimationsModule,
-    LightboxModule
+    NgbModule,
   ],
   providers: [
     RandomSlideGeneratorService,

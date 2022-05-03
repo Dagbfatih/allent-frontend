@@ -1,17 +1,8 @@
-import { Photo } from './../../models/entities/photo';
-import { GalleryService } from './../../services/gallery.service';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 import { Mold } from 'src/app/models/entities/mold';
 import { MoldService } from 'src/app/services/mold.service';
-import {
-  Gallery,
-  GalleryItem,
-  ImageItem,
-  ImageSize,
-  ThumbnailsPosition,
-} from 'ng-gallery';
-import { Lightbox } from 'ng-gallery/lightbox';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-gallery',
@@ -20,33 +11,20 @@ import { Lightbox } from 'ng-gallery/lightbox';
 })
 export class GalleryComponent implements OnInit {
   molds: Mold[] = [];
-  items: GalleryItem[];
+  currentPhotoPath: string;
 
   constructor(
     private moldService: MoldService,
-    private gallery: Gallery,
-    public lightbox: Lightbox
+    private modalService: NgbModal
   ) {}
 
   ngOnInit(): void {
     this.getAllMolds();
-    this.getAllGalleryItems();
-    this.configureLightbox();
   }
 
-  configureLightbox() {
-    const lightboxRef = this.gallery.ref('lightbox');
-    lightboxRef.setConfig({
-      imageSize: ImageSize.Contain,
-      thumbPosition: ThumbnailsPosition.Bottom,
-    });
-    lightboxRef.load(this.items);
-  }
-
-  getAllGalleryItems() {
-    this.items = this.molds.map(
-      (mold) => new ImageItem({ src: mold.path, thumb: mold.path })
-    );
+  open(path: string, content: any) {
+    this.currentPhotoPath = path;
+    this.modalService.open(content, { centered: true, size: 'xl' });
   }
 
   getAllMolds() {

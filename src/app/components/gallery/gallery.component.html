@@ -4,11 +4,13 @@
 
     <!-- LG -->
     <div class="d-none d-lg-block mb-5">
+
+
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div *ngFor="let mold of molds; let i = index;" class="col">
                 <div class="card text-white bg-dark h-100">
                     <!-- border-light -->
-                    <img [src]="mold.path" class="card-img-top" alt="..." (click)="lightbox.open(i);">
+                    <img [src]="mold.path" class="card-img-top" alt="..." (click)="open(mold.path, content)">
                     <div class="card-body">
                         <h5 class="card-title">
                             {{getTranslate(mold.name)}}
@@ -28,7 +30,7 @@
             <div *ngFor="let mold of molds; let i = index;" class="col">
                 <div class="card tex-white bg-dark h-100">
                     <!-- border-light -->
-                    <img [src]="mold.path" class="card-img-top" alt="..." (click)="lightbox.open(i);">
+                    <img [src]="mold.path" class="card-img-top" alt="..." (click)="open(mold.path, content)">
                     <div class="card-body">
                         <h5 class="card-title">
                             {{getTranslate(mold.name)}}
@@ -38,10 +40,16 @@
                         </p>
                     </div>
                 </div>
-                <!-- <div class="mb-3">
-                    <img [src]="mold.path" class="img-fluid" alt="...">
-                </div> -->
             </div>
         </div>
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <img [src]="currentPhotoPath" class="img-fluid" alt="...">
+    </div>
+</ng-template>
