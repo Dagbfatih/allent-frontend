@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DownloadableContentComponent } from './components/downloadable-content/downloadable-content.component';
 import { MachineParkourComponent } from './components/machine-parkour/machine-parkour.component';
 import { CorporateInfoComponent } from './components/corporate-info/corporate-info.component';
@@ -73,7 +74,9 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, routerOptions)],
+  imports: [
+    RouterModule.forRoot(routes, routerOptions),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

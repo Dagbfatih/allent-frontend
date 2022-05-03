@@ -5,10 +5,10 @@
     <!-- LG -->
     <div class="d-none d-lg-block mb-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div *ngFor="let mold of molds" class="col">
+            <div *ngFor="let mold of molds; let i = index;" class="col">
                 <div class="card text-white bg-dark h-100">
                     <!-- border-light -->
-                    <img [src]="mold.path" class="card-img-top" alt="...">
+                    <img [src]="mold.path" class="card-img-top" alt="..." (click)="lightbox.open(i);">
                     <div class="card-body">
                         <h5 class="card-title">
                             {{getTranslate(mold.name)}}
@@ -25,10 +25,10 @@
     <!-- SM -->
     <div class="d-lg-none mb-5">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div *ngFor="let mold of molds" class="col">
+            <div *ngFor="let mold of molds; let i = index;" class="col">
                 <div class="card tex-white bg-dark h-100">
                     <!-- border-light -->
-                    <img [src]="mold.path" class="card-img-top" alt="...">
+                    <img [src]="mold.path" class="card-img-top" alt="..." (click)="lightbox.open(i);">
                     <div class="card-body">
                         <h5 class="card-title">
                             {{getTranslate(mold.name)}}
