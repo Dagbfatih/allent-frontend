@@ -22,7 +22,7 @@ ul.friend-list {
 }
 
 .text-custom > li > a {
-  color: #07376B;
+  color: #07376b;
   font-weight: 400;
 }
 
@@ -41,6 +41,10 @@ ul.friend-list {
 
 .fa.fa-linkedin {
   color: #0a66c2;
+}
+
+.img-custom {
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .fa.fa-instagram {

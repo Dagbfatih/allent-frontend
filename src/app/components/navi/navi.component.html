@@ -86,15 +86,17 @@
         <!-- NAVBAR BRAND -->
         <a class="navbar-brand d-flex align-items-center" routerLink="/">
             <!-- lg -->
-            <img *ngIf="getCurrentLanguageCode() === 'tr-TR'" src="assets/logo/allent-logo.png" height="60"
-                class="d-inline-block align-text-top d-none d-lg-block">
-            <img *ngIf="getCurrentLanguageCode() === 'en-US'" src="assets/logo/allent-logo-en.png" height="60"
-                class="d-inline-block align-text-top d-none d-lg-block">
+            <img *ngIf="getCurrentLanguageCode() === 'tr-TR'" src="assets/logo/allent-logo.webp" height="60"
+                class="d-inline-block align-text-top d-none d-lg-block img-custom">
+            <img *ngIf="getCurrentLanguageCode() === 'en-US'" src="assets/logo/allent-logo-en.webp" height="60"
+                class="d-inline-block align-text-top d-none d-lg-block img-custom">
 
             <!-- sm -->
-            <img *ngIf="getCurrentLanguageCode() === 'tr-TR'" src="assets/logo/allent-logo.png" height="50" class="d-inline-block align-text-top d-lg-none">
-            <img *ngIf="getCurrentLanguageCode() === 'en-US'" src="assets/logo/allent-logo-en.png" height="50" class="d-inline-block align-text-top d-lg-none">
-            
+            <img *ngIf="getCurrentLanguageCode() === 'tr-TR'" src="assets/logo/allent-logo.webp" height="50"
+                class="d-inline-block align-text-top d-lg-none">
+            <img *ngIf="getCurrentLanguageCode() === 'en-US'" src="assets/logo/allent-logo-en.webp" height="50"
+                class="d-inline-block align-text-top d-lg-none">
+
             <!-- <h4 class="d-lg-none ms-2 font-arial"><strong>A L L E N T</strong> Plastik & Kalıp</h4> -->
         </a>
 
@@ -124,7 +126,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
                             <a class="dropdown-item" style="white-space: normal;"
-                                (click)="navigate('/our-services/','plastic-injection-molding')">
+                                (click)="navigate('/our-services/mold-manufacturing', 'mold-manufacturing')">
                                 {{getTranslate('moldManufacturing')}}
                             </a>
                         </li>
@@ -133,7 +135,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" style="white-space: normal;"
-                                (click)="navigate('/our-services/','industrial-product-development')">
+                                (click)="navigate('/our-services/product-design', 'product-design')">
                                 {{getTranslate('productDesign')}}
                             </a>
                         </li>
@@ -142,7 +144,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" style="white-space: normal;"
-                                (click)="navigate('/our-services/','manufacture-of-plastic-products')">
+                                (click)="navigate('/our-services/injection-production', 'injection-production')">
                                 {{getTranslate('injectionProduction')}}
                             </a>
                         </li>
@@ -268,7 +270,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
-                                    (click)="navigate('/our-services','plastic-injection-molding')">
+                                    (click)="navigate('/our-services/mold-manufacturing', 'mold-manufacturing')">
                                     {{getTranslate('moldManufacturing')}}
                                 </a>
                             </li>
@@ -277,7 +279,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
-                                    (click)="navigate('/our-services/','industrial-product-development')">
+                                    (click)="navigate('/our-services/product-design', 'product-design')">
                                     {{getTranslate('productDesign')}}
                                 </a>
                             </li>
@@ -286,7 +288,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item" data-bs-dismiss="offcanvas" style="white-space: normal;"
-                                    (click)="navigate('/our-services/','manufacture-of-plastic-products')">
+                                    (click)="navigate('/our-services/injection-production', 'injection-production')">
                                     {{getTranslate('injectionProduction')}}
                                 </a>
                             </li>

@@ -17,7 +17,6 @@ export const routerOptions: ExtraOptions = {
   onSameUrlNavigation: 'reload',
   anchorScrolling: 'enabled',
   scrollPositionRestoration: 'enabled',
-  scrollOffset: [0, 135],
   useHash: true,
 };
 
@@ -46,6 +45,10 @@ export const routes: Routes = [
   {
     path: 'references',
     component: ReferencesComponent,
+  },
+  {
+    path: 'our-services/:elementId',
+    component: OurServicesComponent,
   },
   {
     path: 'our-services',

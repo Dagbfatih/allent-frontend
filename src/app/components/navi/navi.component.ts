@@ -4,7 +4,7 @@ import { Language } from './../../models/entities/language';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 import * as $ from 'jquery';
-import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navi',
@@ -17,8 +17,7 @@ export class NaviComponent implements OnInit {
   constructor(
     private languageService: LanguageService,
     private settingsService: SettingsService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -53,9 +52,21 @@ export class NaviComponent implements OnInit {
     })();
   }
 
-  navigate(url: string, fragment: string) {
-    this.router.navigate([url], {
-      fragment: fragment,
+  navigate(url: string, id: string) {
+    this.router.navigate([url]).then(() => {
+      this.scroll(id);
+    });
+  }
+
+  scroll(id: string) {
+    var element = document.getElementById(id);
+    var headerOffset = 135;
+    var elementPosition = element!.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
     });
   }
 
