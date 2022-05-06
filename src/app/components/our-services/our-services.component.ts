@@ -1,5 +1,5 @@
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
 
 @Component({

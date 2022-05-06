@@ -1,9 +1,7 @@
+import { Injectable } from '@angular/core';
+import randomItem from 'random-item';
 import { Slide } from '../models/entities/slide';
 import { SlideService } from './slide.service';
-import { MoldService } from './mold.service';
-import { Injectable } from '@angular/core';
-import { Mold } from '../models/entities/mold';
-import randomItem from 'random-item';
 
 @Injectable({
   providedIn: 'root',

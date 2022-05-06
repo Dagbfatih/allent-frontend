@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { SettingsService } from './services/settings.service';
 import { TranslationService } from './services/translation.service';
-declare var $: any;
 
 @Component({
   selector: 'app-root',

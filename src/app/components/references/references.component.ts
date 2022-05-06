@@ -17,10 +17,7 @@ export class ReferencesComponent implements OnInit {
     $('.img-sm').on('touchmove', function () {
       $('.img-sm.active').removeClass('active');
       $(this).addClass('active');
-      
     });
-
-    
   }
 
   getTranslate(key: string) {

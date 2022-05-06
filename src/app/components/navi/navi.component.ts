@@ -1,10 +1,10 @@
-import { SettingsService } from './../../services/settings.service';
-import { LanguageService } from './../../services/language.service';
-import { Language } from './../../models/entities/language';
 import { Component, OnInit } from '@angular/core';
-import { allTranslates } from 'src/app/services/translation.service';
-import * as $ from 'jquery';
 import { NavigationStart, Router } from '@angular/router';
+import * as $ from 'jquery';
+import { allTranslates } from 'src/app/services/translation.service';
+import { Language } from './../../models/entities/language';
+import { LanguageService } from './../../services/language.service';
+import { SettingsService } from './../../services/settings.service';
 
 @Component({
   selector: 'app-navi',

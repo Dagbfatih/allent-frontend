@@ -1,9 +1,6 @@
-import { RandomSlideGeneratorService } from '../../services/random-slide-generator.service';
-import { Mold } from './../../models/entities/mold';
-import { MoldService } from './../../services/mold.service';
 import { Component, OnInit } from '@angular/core';
 import { allTranslates } from 'src/app/services/translation.service';
-import randomItem from 'random-item';
+import { RandomSlideGeneratorService } from '../../services/random-slide-generator.service';
 
 @Component({
   selector: 'app-home',

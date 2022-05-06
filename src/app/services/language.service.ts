@@ -1,7 +1,7 @@
-import { LanguageDbService } from './../database/language-db.service';
-import { Language } from './../models/entities/language';
 import { Injectable } from '@angular/core';
 import { ServiceRepositoryLocalBase } from '../core/services/local-database/service.repository.base.local';
+import { LanguageDbService } from './../database/language-db.service';
+import { Language } from './../models/entities/language';
 
 @Injectable({
   providedIn: 'root',
