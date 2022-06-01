@@ -8,18 +8,24 @@
   text-decoration: underline;
 } */
 
-.list-unstyled > li > a {
+
+
+.link-dark.link {
   color: #495057;
   text-decoration: none;
 }
 
-.list-unstyled > li > a:hover {
+.link-dark.link:hover {
   color: #0d6efd;
   text-decoration: underline;
 }
 
 .fa.fa-whatsapp {
   color: #0dc143;
+}
+
+.fa.fa-twitter {
+  color: #00aced;
 }
 
 .fa.fa-facebook {
