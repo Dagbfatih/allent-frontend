@@ -20,6 +20,11 @@
   text-decoration: underline;
 }
 
+.link-decoration-none{
+  color: #495057;
+  text-decoration: none;
+}
+
 .fa.fa-whatsapp {
   color: #0dc143;
 }
